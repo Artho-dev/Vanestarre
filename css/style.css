@@ -1,0 +1,258 @@
+html{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+header{
+    height: 80px;
+    display: flex;
+    width: 100%;
+    background-color: hsl(39, 100%, 50%,0);
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    border: 0;
+
+}
+#backgroundHome{
+    background-color: #c446f8;
+    height: 100vh;
+    background: url("https://cdn.discordapp.com/attachments/772533165519667210/798965290946789427/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#newPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.post{
+    width: 300px;
+    padding: 30px;
+    height: auto;
+    font-family: "Poppins", sans-serif  ;
+    display: flex;
+    align-items: center;
+    border: 2px;
+    border-style: solid;
+    border-color: #df94ff;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+
+}
+.user h2{
+    font-size: 15px;
+    margin: 0;
+    color: #37064d;
+    font-weight: 600;
+}
+.postHeader {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.user{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post p{
+    font-size: 18px;
+    color: #ba2df5;
+    margin: 0;
+    margin-top: 20px;
+}
+.profilPicture{
+    clip-path: circle();
+    width: 60px;
+}
+.postDots{
+    width: 20px;
+    position: relative;
+    top: -10px;
+    right: -30px;
+}
+.postDots:hover{
+    cursor: pointer;
+}
+.postFooter{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 30px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.user p{
+    font-size: 15px;
+    margin: 0;
+}
+header img{
+    width: 70px;
+    height: 70px;
+    margin-left: 40px;
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#title{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80px;
+    margin: 0;
+}
+
+
+#home{
+    display: flex;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    flex-direction: row;
+    align-items: center;
+    height:90vh ;
+    padding-left:10vw;
+    padding-right:10vw;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+#home h2{
+    font-weight: 200;
+}
+#typo{
+    width: 230px;
+    margin-top: -30px;
+    margin-left: 290px;
+}
+#buttonHeader{
+    font-size: 15px;
+    width: 130px;
+    float: right;
+    margin: 0;
+    margin-right: 40px;
+}
+.buttonLogin{
+    background-color: white;
+    text-decoration: none;
+    border-color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    height: 40px;
+    color: #ba2df5;
+    border: 0;
+    border-radius: 10px;
+;
+}
+
+.buttonLogin:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #f4f4f4;
+}
+.buttonRegister{
+    background-color: hsl(39, 100%, 50%,0);
+    border: 2px;
+    border-color: white;
+    text-decoration: none;
+    border-color: white;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+    border-style: solid;
+}
+.buttonRegister:hover{
+    background-color: white;
+    transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+    color:  #ba2df5;
+}
+button:hover{
+    cursor: hand;
+}
+
+#slogan{
+    width: auto;
+}
+.colum{
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.postEmoji{
+    width: 22px;
+}
+
+.postEmoji:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 100ms;
+
+}
+
+#sectionPostTitle{
+    font-family: "Poppins",sans-serif;
+    font-size: 27px;
+    padding:50px;
+    padding-top: 200px;
+    color:#37064d;
+    font-weight: 600;
+}
+
+#sectionPostTitle::after{
+    content: " Vanéstarre";
+    color:#ba2df5;
+    font-weight: 600;
+}
+@media screen and (max-width: 1084px) {
+
+    #home    {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .colum{
+        padding: 0;
+    }
+    #typo{
+        font-size: 10px;
+        margin-left: 0px;
+        width: 200px;
+    }
+    #slogan h2{
+        width: 250px;
+    }
+    header img{
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    #title{
+        font-size: 22px;
+    }
+    #buttonHeader{
+        font-size: 13px;
+        width: 110px;
+    }
+    #buttonHeader{
+        margin-right: 20px;
+    }
+}
