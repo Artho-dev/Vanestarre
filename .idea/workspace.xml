@@ -60,7 +60,7 @@
       <workItem from="1610669040715" duration="9642000" />
       <workItem from="1610712080659" duration="17628000" />
       <workItem from="1610730649736" duration="961000" />
-      <workItem from="1610809709090" duration="13392000" />
+      <workItem from="1610809709090" duration="13628000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610823823115</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ajout de génération lien d'inscription">
+      <created>1610823958073</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610823958073</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

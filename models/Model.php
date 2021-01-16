@@ -14,14 +14,17 @@ function connectDB() {
 //Setters
 
 function insertUser($username, $name, $mail, $password, $birthdate, $country) {
-    $db = connectDB();
+
 
     $ins = $db->prepare('INSERT INTO USER (userid, username, name, mail, password, $birthdate, $country) VALUES (?, ?, ?, SHA1(?), ?, ?)');
     $ins->execute(array($username, $name, $mail, $password, $birthdate, $country));
 }
 
 function insertRegisterConfirmationRequest($userid) {
+    $db = connectDB();
 
+    $ins = $db->prepare('INSERT INTO INSCRIPTION_CONFIRMATION (userid) VALUES (?)');
+    $ins->execute(array($userid));
 }
 
 //Getters
