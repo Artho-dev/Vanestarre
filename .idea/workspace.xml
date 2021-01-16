@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="premier commit de la passion">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Ajout base de donnée">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cuteColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/love.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/loveColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/swag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/swagColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tropcool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tropcoolColor.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/confirm_inscription_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +63,7 @@
       <workItem from="1610669040715" duration="9642000" />
       <workItem from="1610712080659" duration="17628000" />
       <workItem from="1610730649736" duration="961000" />
-      <workItem from="1610809709090" duration="5315000" />
+      <workItem from="1610809709090" duration="7756000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -81,7 +72,28 @@
       <option name="project" value="LOCAL" />
       <updated>1610726095432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implémentation html de inscription.php">
+      <created>1610815266386</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610815266387</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modification du nom des assets">
+      <created>1610815377277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610815377278</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout base de donnée">
+      <created>1610815396341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610815396341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +112,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="premier commit de la passion" />
-    <option name="LAST_COMMIT_MESSAGE" value="premier commit de la passion" />
+    <MESSAGE value="Implémentation html de inscription.php" />
+    <MESSAGE value="Modification du nom des assets" />
+    <MESSAGE value="Ajout base de donnée" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout base de donnée" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
