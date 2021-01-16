@@ -26,6 +26,18 @@ function insertUser($username, $name, $mail, $password, $birthdate, $country) {
     }
 }
 
+function setUserTemporaryById($userid, $value) {
+    $db = connectDB();
+
+    try {
+        $ins = $db->prepare('UPDATE USER SET isTemporary = ? WHERE USER.userid = ?;');
+        $ins->execute(array($value, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 function insertRegisterConfirmationRequest($userid) {
     $db = connectDB();
 
@@ -38,6 +50,15 @@ function insertRegisterConfirmationRequest($userid) {
     }
 }
 
+//Deleters
+
+function deleteRegisterConfirmationRequest($userid, $code) {
+    $db = connectDB();
+
+    $del = $db->prepare('DELETE FROM INSCRIPTION_CONFIRMATION WHERE userid = ? AND code = ?');
+    $del->execute(array($userid, $code));
+}
+
 //Getters
 
 function requestRegisterConfirmationRequestByUserid($userid) {
@@ -45,6 +66,14 @@ function requestRegisterConfirmationRequestByUserid($userid) {
 
     $req = $db->prepare('SELECT userid, code FROM INSCRIPTION_CONFIRMATION WHERE userid = ?');
     $req->execute(array($userid));
+    return $req;
+}
+
+function requestRegisterConfirmationRequestByUseridAndCode($userid, $code) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT userid, code FROM INSCRIPTION_CONFIRMATION WHERE userid = ? and code = ?');
+    $req->execute(array($userid, $code));
     return $req;
 }
 

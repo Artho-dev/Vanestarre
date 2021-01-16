@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="correction de getPosts() (il ne peut plus prendre de paramètre limite pour le moment)">
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_inscription_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
     </list>
@@ -64,7 +61,8 @@
       <workItem from="1610669040715" duration="9642000" />
       <workItem from="1610712080659" duration="17628000" />
       <workItem from="1610730649736" duration="961000" />
-      <workItem from="1610809709090" duration="19537000" />
+      <workItem from="1610809709090" duration="19877000" />
+      <workItem from="1610831464580" duration="862000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -150,7 +148,35 @@
       <option name="project" value="LOCAL" />
       <updated>1610827940838</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Finitions du système d'inscription">
+      <created>1610831339156</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610831339156</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Correction et ajouts de requêtes">
+      <created>1610831355850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610831355850</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Ajout de détetion de session ID, définit à -1 si le session ID n'existe pas">
+      <created>1610831387776</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610831387776</updated>
+    </task>
+    <task id="LOCAL-00016" summary="workspace.xml">
+      <created>1610831398806</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610831398806</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +192,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="premier commit de la passion" />
@@ -177,7 +204,11 @@
     <MESSAGE value="correction de génération lien d'inscription" />
     <MESSAGE value="ajout de try catch sur les requêtes à risque" />
     <MESSAGE value="correction de getPosts() (il ne peut plus prendre de paramètre limite pour le moment)" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction de getPosts() (il ne peut plus prendre de paramètre limite pour le moment)" />
+    <MESSAGE value="Finitions du système d'inscription" />
+    <MESSAGE value="Correction et ajouts de requêtes" />
+    <MESSAGE value="Ajout de détetion de session ID, définit à -1 si le session ID n'existe pas" />
+    <MESSAGE value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
