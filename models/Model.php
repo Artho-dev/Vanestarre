@@ -2,7 +2,7 @@
 
 function connectDB() {
     try {
-        $db = new PDO('mysql:host=mysql-loicganne.alwaysdata.net;dbname=loicganne_vanestarre;charset=utf8', 'loicganne_root', '!!oojrbd2');
+        $db = new PDO('mysql:host=mysql-loicganne.alwaysdata.net;dbname=loicganne_vanestarre_artho;charset=utf8', 'loicganne_root', '!!oojrbd2');
         return $db;
     }
     catch(Exception $e) {

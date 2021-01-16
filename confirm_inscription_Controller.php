@@ -17,7 +17,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
         $mail = $_POST['mail'];
     }
 
-    if (isset($_POST['password'], $_POST['password_confirm']) && $_POST['password_confirm'] == $_POST['password']) {
+    if (isset($_POST['password'], $_POST['password_confirm'])) {
         $password = $_POST['password'];
         $password_confirm = $_POST['password_confirm'];
     }
@@ -37,7 +37,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
         $conditions = $_POST['conditions'];
     }
 
-    if ($username != "" && $name != "" && $password != "" && $password_confirm != "" && isset($mail, $birthdate, $conditions)) {
+    if (isset($username, $name, $password, $password_confirm, $mail, $birthdate, $conditions) && $username != "" && $name != "" && $password != "" && $password_confirm != "" && $conditions == 'accepted' && $password == $password_confirm) {
 
         //Charger la vue de la page confirmation email
         require 'confirm_inscription_View.php';

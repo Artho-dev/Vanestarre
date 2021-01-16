@@ -1,3 +1,113 @@
 #title{
+    color: white
+    ;
+}
+html{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+#backgroundRegister{
+    height: 100vh;
+    background: url("https://cdn.discordapp.com/attachments/772533165519667210/798965290946789427/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+header{
+    height: 80px;
+    display: flex;
+    width: 100%;
+    background-color: hsl(39, 100%, 50%,0);
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    border: 0;
+
+}
+header img{
+    width: 70px;
+    height: 70px;
+    margin-left: 40px;
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#title{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80px;
+    margin: 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+#inscriptionForm{
+    background-color: white;
     color: #ba2df5;
+    width: 500px;
+    padding:20px;
+    font-family: "Poppins",sans-serif;
+    border-radius: 20px;
+    margin: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+
+}
+#inscriptionForm h2{
+    font-size: 26px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#inscriptionForm form{
+    margin: 20px;
+    margin-top: 20px;
+}
+
+#inscriptionForm form div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.inputInscription{
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 5px;
+    width: 100%;
+    border: 0;
+    background-color: #f8e9ff;
+}
+.errorInput{
+    color: red;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+#inscriptionForm button{
+    background-color: #ba2df5;
+    border: 0;
+    color: white;
+}
+#inscriptionForm option{
+    background-color: white;
+    color: #ba2df5;
+}
+
+#conditions{
+    width: auto;
 }

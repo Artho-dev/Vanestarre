@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="premier commit de la passion">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cuteColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/love.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/loveColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/swag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/swagColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tropcool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tropcoolColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_inscription_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +24,11 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="893a07ea-e572-4525-aef5-16b436a5d8d1" value="Green" />
+    </colors>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,10 +41,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -48,11 +70,40 @@
       <workItem from="1610613487057" duration="21448000" />
       <workItem from="1610653292968" duration="1995000" />
       <workItem from="1610669040715" duration="9642000" />
-      <workItem from="1610712080659" duration="13317000" />
+      <workItem from="1610712080659" duration="17628000" />
+      <workItem from="1610730649736" duration="961000" />
+      <workItem from="1610809709090" duration="5315000" />
     </task>
+    <task id="LOCAL-00001" summary="premier commit de la passion">
+      <created>1610726095432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726095432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="premier commit de la passion" />
+    <option name="LAST_COMMIT_MESSAGE" value="premier commit de la passion" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
