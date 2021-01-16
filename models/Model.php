@@ -74,6 +74,22 @@ function getUserById($userid) {
     return $req->fetch();
 }
 
+function requestUserByUsername($username) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT * FROM USER WHERE username = ?');
+    $req->execute(array($username));
+    return $req;
+}
+
+function requestUserByEmail($mail) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT * FROM USER WHERE mail = ?');
+    $req->execute(array($mail));
+    return $req;
+}
+
 function getUserByUsername($username) {
     $db = connectDB();
 
