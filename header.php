@@ -1,7 +1,8 @@
 <?php
 
-
-//TODO Vérifier si l'utilisateur est connecté et définir le session id équivalent au userid (0 si non connecté)
-session_id(0);
+//Vérifie si le visiteur a un session ID attribué: si ce n'est pas le cas on lui attribue le session ID -1
+if (session_id() == null) {
+    session_id(-1);
+}
 
 session_start();
