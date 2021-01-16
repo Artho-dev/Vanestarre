@@ -16,7 +16,7 @@ function connectDB() {
 function insertUser($username, $name, $mail, $password, $birthdate, $country) {
     $db = connectDB();
 
-    $ins = $db->prepare('INSERT INTO USER (userid, username, name, mail, password, $birthdate, $country) VALUES (?, ?, ?, ?, SHA1(?), ?, ?)');
+    $ins = $db->prepare('INSERT INTO USER (userid, username, name, mail, password, $birthdate, $country) VALUES (?, ?, ?, SHA1(?), ?, ?)');
     $ins->execute(array($username, $name, $mail, $password, $birthdate, $country));
 }
 
