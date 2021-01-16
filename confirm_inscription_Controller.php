@@ -49,7 +49,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
         insertUser($username, $name, $mail, $password, $birthdate, $country);
         $user = getUserByUsername($username);
 
-        if($user['isTemporary'] == 1) {
+        if($user['isTemporary']) {
 
             //On vérifie si une relation de confirmation d'inscription existe déjà
             $req = requestRegisterConfirmationRequestByUserid($user['userid']);
