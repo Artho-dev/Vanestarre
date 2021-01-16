@@ -5,33 +5,25 @@ include 'models/Model.php';
 if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
     //Vérification de la non-existance et de la justesse de chaque variable
-    if (isset($_POST['username'])) {
-        $username = $_POST['username'];
-    }
+    if (isset($_POST['username'])) $username = $_POST['username'];
 
-    if (isset($_POST['publicname'])) {
-        $name = $_POST['publicname'];
-    }
+    if (requestUserByUsername($username)->rowCount() != 0) $username = -1;
 
-    if (isset($_POST['mail'])) {
-        $mail = $_POST['mail'];
-    }
+    if (isset($_POST['publicname'])) $name = $_POST['publicname'];
+
+    if (isset($_POST['mail'])) $mail = $_POST['mail'];
+
+    if (requestUserByEmail($mail)->rowCount() != 0) $mail = -1;
 
     if (isset($_POST['password'], $_POST['password_confirm'])) {
         $password = $_POST['password'];
         $password_confirm = $_POST['password_confirm'];
     }
 
-    if (isset($_POST['birthdate'])) {
-        $birthdate = $_POST['birthdate'];
-    }
+    if (isset($_POST['birthdate'])) $birthdate = $_POST['birthdate'];
 
-    if (isset($_POST['country'])) {
-        $country = $_POST['country'];
-    }
-    else {
-        $country = 'Non Spécifié';
-    }
+    if (isset($_POST['country'])) $country = $_POST['country'];
+    else $country = 'Non Spécifié';
 
     if (isset($_POST['conditions'])) {
         $conditions = $_POST['conditions'];
@@ -40,17 +32,14 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
         $conditions = 'refused';
     }
 
-    if (isset($username, $name, $password, $password_confirm, $mail, $birthdate, $conditions) && $username != "" && $name != "" && $password != "" && $password_confirm != "" && $conditions == 'accepted' && $password == $password_confirm) {
-
-        //Charger la vue de la page confirmation email
-        require 'confirm_inscription_View.php';
+    if (isset($username, $name, $password, $password_confirm, $mail, $birthdate, $conditions) && $username != "" && $username != -1 && $name != "" && $mail != -1 && $password != "" && $password_confirm != "" && $conditions == 'accepted' && $password == $password_confirm) {
 
         //Ajout du l'utilisateur dans la base de donnée en tant qu'utilisateur temporaire
         insertUser($username, $name, $mail, $password, $birthdate, $country);
         $user = getUserByUsername($username);
 
+        //On vérifie que l'utilisateur est bien un utilisateur temporaire.
         if($user['isTemporary']) {
-
             //On vérifie si une relation de confirmation d'inscription existe déjà
             $req = requestRegisterConfirmationRequestByUserid($user['userid']);
             if ($req->rowCount() == 0) {
@@ -63,7 +52,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
                 //On génère le lien de confirmation
                 $website = 'loicganne.alwaysdata.net';
-                $confirmation_url = 'http://'.$website.'/php/complete_registration?id='.$id.'&code='.$code;
+                $confirmation_url = 'http://'.$website.'/php/complete_registration.php?id='.$id.'&code='.$code;
 
                 //On génère le message du mail (possiblement à écrire en HTML plus tard)
                 $mail_message = 'Coucou '. $name .', bienvenue sur MON réseau-social: Vanéstarre!' . PHP_EOL . PHP_EOL;
@@ -73,7 +62,15 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
                 //On envoie le lien confirmation par email
                 mail($mail, 'Vanéstarre: Confirmation d\'E-mail', $mail_message);
             }
+            else {
+                die('Erreur: Tuple dupliqué.');
+            }
         }
+        else {
+            die('Erreur: Utilisateur non autorisé.');
+        }
+        //Charger la vue de la page confirmation email
+        require 'confirm_inscription_View.php';
     }
     else {
         //Recharger la vue de la page inscription
