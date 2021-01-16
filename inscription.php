@@ -18,8 +18,24 @@
         </header>
 
         <section>
+            <div id="connectForm" class="colum">
+                <h2 class="formTitle">Connexion</h2>
+                <form action="" method="post" name="inscription">
+                    <div>
+                        <label for="login_username">Identifiant d'utilisateur :</label>
+                        <input class="inputInscription" type="text" name="login_username" id="login_username" value="">
+                    </div>
+                    <?php //<span class="errorInput">Veuillez remplir le champs</span> ?>
+                    <div>
+                        <label for="login_password">Mot de passe :</label>
+                        <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="6">
+                    </div>
+                    <button class="inputInscription" type="submit" name="inscription" value="login">Se connecter</button>
+                </form>
+            </div>
+
             <div id="inscriptionForm" class="colum">
-                <h2>Inscription</h2>
+                <h2 class="formTitle">Inscription</h2>
                 <form action="confirm_inscription_Controller.php" method="post" name="action">
                     <div>
                         <label for="username">Identifiant d'utilisateur* :</label>

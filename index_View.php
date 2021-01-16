@@ -7,7 +7,7 @@
     <div id="backgroundHome">
         <header>
             <div>
-                <img src="assets/logo.png" alt="">
+                <a href="#"><img src="assets/logo.png" alt=""></a>
                 <h1 id="title"> Vanéstarre</h1>
             </div>
             <button id="buttonHeader" type="button" class="buttonLogin">Se connecter</button>
