@@ -60,8 +60,7 @@ function displayPosts($posts, $sessionid) {
 }
 
 
-$limit = 6;
-
-$posts = getPosts($limit);
+$sessionid = session_id();
+$posts = getPosts();
 
 require_once 'index_View.php';
