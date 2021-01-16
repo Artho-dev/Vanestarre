@@ -3,13 +3,13 @@
     page_start('Inscription', ['css/inscription.css']);
 
     $empty_field = 'Veuillez remplir le champ ci-dessus';
-    $empty_conditions = 'Veuillez accepter les conditions d\'utilisation.';
+    $empty_conditions = 'Veuillez accepter les conditions d\'utilisation';
     $incorrect_password = 'Veuillez entrer deux mots de passe identiques';
 ?>
     <div id="backgroundRegister">
         <header id = "registerHead">
             <div>
-                <img src="assets/logo.png" alt="">
+                <a href="index.php"><img src="assets/logo.png" alt=""></a>
                 <h1 id="title">Vanéstarre</h1>
             </div>
         </header>
@@ -43,7 +43,7 @@
                         <input class="inputInscription" type="password" name="password_confirm" id="password_confirm" minlength="6">
                     </div>
                     <?  if (isset($password_confirm) && $password_confirm == "") {
-                            echo '<p>', $empty_field ,'</p>';
+                            echo '<span class="errorInput">', $empty_field ,'</span>';
                         }
                         elseif (isset($password_confirm, $password) && $password_confirm != $password)
                             echo '<span class="errorInput">',$incorrect_password,'</span>'; ?>
@@ -67,7 +67,7 @@
                         <input type="checkbox" name="conditions" id="conditions" value="accepted">
                     </div>
                     <?php
-                        if (!isset($conditions))
+                        if (isset($conditions) && $conditions == 'refused')
                             echo '<span class="errorInput">', $empty_conditions ,'</span>';
                     ?>
                     <button class="inputInscription" type="submit" name="action" value="register">S'inscrire</button>

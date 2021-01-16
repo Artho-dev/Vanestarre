@@ -36,22 +36,44 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
     if (isset($_POST['conditions'])) {
         $conditions = $_POST['conditions'];
     }
+    else {
+        $conditions = 'refused';
+    }
 
     if (isset($username, $name, $password, $password_confirm, $mail, $birthdate, $conditions) && $username != "" && $name != "" && $password != "" && $password_confirm != "" && $conditions == 'accepted' && $password == $password_confirm) {
 
         //Charger la vue de la page confirmation email
         require 'confirm_inscription_View.php';
 
-        //setUser($username, $name, $mail, $password, $birthdate, $country);
+        //Ajout du l'utilisateur dans la base de donnée en tant qu'utilisateur temporaire
+        insertUser($username, $name, $mail, $password, $birthdate, $country);
+        $user = getUserByUsername($username);
 
-        //Envoie de confirmation par email
-        $confirmation_url = '**INSERER UN URL**';
+        if($user['isTemporary'] == 1) {
 
-        $mail_message = 'Coucou '. $name .', bienvenue sur MON réseau-social: Vanéstarre!' . PHP_EOL . PHP_EOL;
-        $mail_message .= 'Voici un lien qui te permettra de confirmer ton email: ' . $confirmation_url . PHP_EOL . PHP_EOL;
-        $mail_message .= 'A très bientôt sur Vanéstarre!';
+            //On vérifie si une relation de confirmation d'inscription existe déjà
+            $req = requestRegisterConfirmationRequestByUserid($user['userid']);
+            if ($req->rowCount() == 0) {
+                //On crée une nouvelle relation de confirmation d'inscription qu'on récupère dans $req
+                insertRegisterConfirmationRequest($user['userid']);
+                $req = requestRegisterConfirmationRequestByUserid($user['userid'])->fetch();
 
-        mail($mail, 'Vanéstarre: Confirmation d\'E-mail', $mail_message);
+                $id = $req['userid'];
+                $code = $req['code'];
+
+                //On génère le lien de confirmation
+                $website = 'loicganne.alwaysdata.net';
+                $confirmation_url = 'http://'.$website.'/php/complete_registration?id='.$id.'&code='.$code;
+
+                //On génère le message du mail (possiblement à écrire en HTML plus tard)
+                $mail_message = 'Coucou '. $name .', bienvenue sur MON réseau-social: Vanéstarre!' . PHP_EOL . PHP_EOL;
+                $mail_message .= 'Voici un lien qui te permettra de confirmer ton email: ' . $confirmation_url . PHP_EOL . PHP_EOL;
+                $mail_message .= 'A très bientôt sur Vanéstarre!';
+
+                //On envoie le lien confirmation par email
+                mail($mail, 'Vanéstarre: Confirmation d\'E-mail', $mail_message);
+            }
+        }
     }
     else {
         //Recharger la vue de la page inscription
