@@ -31,8 +31,13 @@ function requestReaction($userid, $postid) {
 function insertReaction($userid, $postid, $type) {
     $db = connectDB();
 
-    $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid) VALUES (?, ?, ?)');
-    $ins->execute(array($type, $postid, $userid));
+    try {
+        $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid) VALUES (?, ?, ?)');
+        $ins->execute(array($type, $postid, $userid));
+    }
+    catch (Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
 }
 
 function deleteReaction($userid, $postid) {
