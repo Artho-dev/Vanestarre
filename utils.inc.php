@@ -27,7 +27,7 @@
     }
 
     function page_end() {
-        echo '</body></html>';
+        echo '<script type="text/javascript" src="js/script.js"></script></body></html>';
     }
 
     function getCountries() {

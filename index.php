@@ -31,7 +31,7 @@ function displayPosts($posts, $sessionid) {
 
         $reaction_table = array('style', 'swag', 'cute', 'love');
 
-        echo '<div class="post">
+        echo '<div class="post" id="post',$id,'">
                 <div class="postHeader">
                     <img src="assets/picture.PNG" class="profilPicture" alt="">
                     <section class="user">
@@ -45,11 +45,13 @@ function displayPosts($posts, $sessionid) {
 
         for ($i=0; $i < count($reaction_table); ++$i) {
             $t = $i+1;
-            $href = 'href="php/reaction.php?t=' . $t . '&id=' . $id . '"';
+            $reactionHref = '';
+            $reactionAttribut = 'id="'.$t.'_'. $id .'"onclick="reaction(this)"';
             if ($sessionid == 0) {
-                $href = '';
+                $reactionAttribut= '';
+                $reactionHref = 'href="inscription.php"';
             }
-            echo '<a ', $href ,'><img class="postEmoji" src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
+            echo '<a ', $reactionHref ,'><img class="postEmoji"', $reactionAttribut , 'src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
             echo '<span>' , getReactionAmount($id, $reaction_table[$i]) ,'</span>';
         }
         echo '</div></div>';
