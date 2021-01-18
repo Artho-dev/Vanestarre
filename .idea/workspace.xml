@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="workspace.xml">
+      <change afterPath="$PROJECT_DIR$/connexion_Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/893a07ea-e572-4525-aef5-16b436a5d8d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/893a07ea-e572-4525-aef5-16b436a5d8d1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/index_View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/reaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/reaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +71,7 @@
       <workItem from="1610712080659" duration="17628000" />
       <workItem from="1610730649736" duration="961000" />
       <workItem from="1610809709090" duration="19877000" />
-      <workItem from="1610831464580" duration="2423000" />
+      <workItem from="1610831464580" duration="15171000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -192,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610832602497</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="implémentation html du formulaire de connexion dans inscription.php">
+      <created>1610834016122</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610834016122</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +239,8 @@
     <MESSAGE value="Ajout de détetion de session ID, définit à -1 si le session ID n'existe pas" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="finition de la completion d'inscription par email" />
-    <option name="LAST_COMMIT_MESSAGE" value="finition de la completion d'inscription par email" />
+    <MESSAGE value="implémentation html du formulaire de connexion dans inscription.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="implémentation html du formulaire de connexion dans inscription.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

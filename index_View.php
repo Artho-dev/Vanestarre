@@ -22,9 +22,9 @@
                 <img src="assets/Typo.png" id="typo" alt="">
             </div>
 
-            <div class="colum">
-                <button type="button" onclick=window.location.href='inscription.php' class="buttonLogin">S'inscrire</button>
-                <button type="button" class="buttonRegister">Se connecter</button>
+            <div id="buttonHome" class="colum">
+                <button type="button" onclick=window.location.href="inscription.php" class="buttonLogin">S'inscrire</button>
+                <button type="button" onclick=window.location.href="inscription.php" class="buttonRegister">Se connecter</button>
             </div>
         </section>
     </div>

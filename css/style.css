@@ -21,7 +21,7 @@ header{
 #backgroundHome{
     background-color: #c446f8;
     height: 100vh;
-    background: url("https://i.postimg.cc/9F9Nr9f7/background.png") no-repeat center center fixed;
+    background: url("https://i.postimg.cc/9F9Nr9f7/background.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -49,13 +49,14 @@ header{
     margin: 20px;
     flex-direction: column;
     border-radius: 20px;
-
+    
 }
 .user h2{
     font-size: 15px;
     margin: 0;
     color: #37064d;
     font-weight: 600;
+    
 }
 .postHeader {
     display: flex;
@@ -75,7 +76,7 @@ header{
     font-size: 18px;
     color: #ba2df5;
     margin: 0;
-    margin-top: 20px;
+    margin-top:5px;
 }
 .profilPicture{
     clip-path: circle();
@@ -84,8 +85,8 @@ header{
 .postDots{
     width: 20px;
     position: relative;
-    top: -10px;
-    right: -30px;
+    bottom:44px;
+    left:110px;
 }
 .postDots:hover{
     cursor: pointer;
@@ -107,6 +108,7 @@ header img{
     width: 70px;
     height: 70px;
     margin-left: 40px;
+    margin-bottom: 10px;
 }
 header div {
     display: flex;
@@ -119,6 +121,7 @@ header div {
     font-size: 25px;
     line-height: 80px;
     margin: 0;
+    
 }
 
 
@@ -133,14 +136,22 @@ header div {
     padding-right:10vw;
     flex-wrap: wrap;
     justify-content: start;
-}
+} 
 #home h2{
     font-weight: 200;
+    -webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 200ms both;
+	animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 200ms both;
 }
 #typo{
     width: 230px;
     margin-top: -30px;
     margin-left: 290px;
+    -webkit-animation: slide-top-short 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: slide-top-short 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+#buttonHome{
+    -webkit-animation: slide-top-short 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+	animation: slide-top-short 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 }
 #buttonHeader{
     font-size: 15px;
@@ -223,36 +234,86 @@ button:hover{
     font-weight: 600;
 }
 @media screen and (max-width: 1084px) {
-
-    #home    {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .colum{
-        padding: 0;
-    }
-    #typo{
-        font-size: 10px;
-        margin-left: 0px;
-        width: 200px;
-    }
-    #slogan h2{
-        width: 250px;
-    }
-    header img{
+    
+   #home    {
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+   }
+   .colum{
+       padding: 0;
+   }
+   #typo{
+       font-size: 10px;
+       margin-left: 0px;
+       width: 200px;
+   }
+   #slogan h2{
+       width: 250px;
+   }
+   header img{
         width: 60px;
         height: 60px;
         margin-left: 20px;
+   }
+   #title{
+       font-size: 22px;
+   }
+   #buttonHeader{
+       font-size: 13px;
+       width: 110px;
+   }
+   #buttonHeader{
+       margin-right: 20px;
+   }
+  } 
+
+  
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
     }
-    #title{
-        font-size: 22px;
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
     }
-    #buttonHeader{
-        font-size: 13px;
-        width: 110px;
+  }
+  @keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
     }
-    #buttonHeader{
-        margin-right: 20px;
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
     }
-}
+  }
+@-webkit-keyframes slide-top-short {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+  }
+@keyframes slide-top-short {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }

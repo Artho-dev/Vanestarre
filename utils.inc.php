@@ -4,7 +4,8 @@
     {
         $favicon = 'assets/favicon.png';
 
-        echo '<html lang="fr">
+        echo '<!DOCTYPE html>
+              <html lang="fr">
               <head>
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">';

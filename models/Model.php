@@ -80,7 +80,7 @@ function requestRegisterConfirmationRequestByUseridAndCode($userid, $code) {
 function getPosts() {
     $db = connectDB();
 
-    $posts = $db->query('SELECT * FROM POST ORDER BY creation_date DESC LIMIT 0, 6');
+    $posts = $db->query('SELECT * FROM POST ORDER BY creation_date DESC LIMIT 0, 20');
     //$posts ->execute(array($limit));
 
     return $posts;
@@ -119,10 +119,38 @@ function requestUserByEmail($mail) {
     return $req;
 }
 
+function requestUserByIDAndPassword($userid, $password) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT userid FROM USER WHERE userid = ? AND password = SHA1(?)');
+    $req->execute(array($userid, $password));
+    return $req;
+}
+
+function requestUserByUsernameAndPassword($username, $password) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT userid FROM USER WHERE username = ? AND password = SHA1(?)');
+    $req->execute(array($username, $password));
+    return $req;
+}
+
+function requestUserByEmailAndPassword($mail, $password) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT userid FROM USER WHERE mail = ? AND password = SHA1(?)');
+    $req->execute(array($mail, $password));
+    return $req;
+}
+
 function getUserByUsername($username) {
     $db = connectDB();
 
     $req = $db->prepare('SELECT * FROM USER WHERE username = ?');
     $req->execute(array($username));
     return $req->fetch();
+}
+
+function getUserByEmail($mail) {
+    return requestUserByEmail($mail)->fetch();
 }

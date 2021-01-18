@@ -38,29 +38,31 @@ function displayPosts($posts, $sessionid) {
                         <h2 class="">' , $user_name , '</h2>
                         <p>@' , $user_username , '</p>
                     </section>
-                    <img class="postDots" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png"/>
                 </div>
+                <img class="postDots" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>
                 <p>' , $message , '</p>
                 <div class="postFooter">';
 
         for ($i=0; $i < count($reaction_table); ++$i) {
             $t = $i+1;
             $href = 'href="php/reaction.php?t=' . $t . '&id=' . $id . '"';
-            if (session_id() == 0) {
+            if ($sessionid == 0) {
                 $href = '';
             }
             echo '<a ', $href ,'><img class="postEmoji" src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
             echo '<span>' , getReactionAmount($id, $reaction_table[$i]) ,'</span>';
         }
-
         echo '</div></div>';
-
     }
-
 }
 
+if (isset($_SESSION['vanestarre']['userid'],$_SESSION['vanestarre']['password']) && requestUserByIDAndPassword($_SESSION['vanestarre']['userid'],$_SESSION['vanestarre']['password'])->rowCount() != 0) {
+    $sessionid = $_SESSION['vanestarre']['userid'];
+}
+else {
+    $sessionid = 0;
+}
 
-$sessionid = session_id();
 $posts = getPosts();
 
 require_once 'index_View.php';

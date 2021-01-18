@@ -8,6 +8,7 @@
     define('error_incorrect_password', 'Veuillez entrer deux mots de passe identiques');
     define('error_username_taken', 'Nom d\'utilisateur déjà pris');
     define('error_mail_taken', 'E-mail déjà pris');
+    define('error_login', 'Identifiant/Email ou mot de passe incorrect')
 ?>
     <div id="backgroundRegister">
         <header id = "registerHead">
@@ -20,17 +21,17 @@
         <section>
             <div id="connectForm" class="colum">
                 <h2 class="formTitle">Connexion</h2>
-                <form action="" method="post" name="inscription">
+                <form action="connexion_Controller.php" method="post" name="login">
+                    <?php if (isset($invalid_login) && $invalid_login) echo '<span class="errorInput">',error_login,'</span>'; ?>
                     <div>
                         <label for="login_username">Identifiant d'utilisateur :</label>
                         <input class="inputInscription" type="text" name="login_username" id="login_username" value="">
                     </div>
-                    <?php //<span class="errorInput">Veuillez remplir le champs</span> ?>
                     <div>
                         <label for="login_password">Mot de passe :</label>
                         <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="6">
                     </div>
-                    <button class="inputInscription" type="submit" name="inscription" value="login">Se connecter</button>
+                    <button class="inputInscription" type="submit" name="login" value="login_page">Se connecter</button>
                 </form>
             </div>
 
