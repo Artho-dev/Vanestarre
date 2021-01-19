@@ -4,7 +4,7 @@ include_once '../models/reaction_Model.php';
 
 require_once '../header.php';
 
-if (isset($_POST['t'],$_POST['id']) && !empty($_POST['t']) && !empty($_POST['id'])) {
+if (isset($_POST['t'],$_POST['id']) && !empty($_POST['t']) && !empty($_POST['id']) && $_SESSION['vanestarre']['userid'] != 0) {
     $id = (int) $_POST['id'];
     $t = (int) $_POST['t'];
     $sessionid = $_SESSION['vanestarre']['userid'];
@@ -26,6 +26,9 @@ if (isset($_POST['t'],$_POST['id']) && !empty($_POST['t']) && !empty($_POST['id'
         else {
             insertReaction($sessionid, $id, $type);
         }
+    }
+    else {
+        die('Erreur: Index not found');
     }
     //header('Location: '.$_SERVER['HTTP_REFERER']);
 }

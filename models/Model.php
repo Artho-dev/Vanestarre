@@ -81,7 +81,6 @@ function getPosts() {
     $db = connectDB();
 
     $posts = $db->query('SELECT * FROM POST ORDER BY creation_date DESC LIMIT 0, 20');
-    //$posts ->execute(array($limit));
 
     return $posts;
 }
