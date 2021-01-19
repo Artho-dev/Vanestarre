@@ -1,13 +1,13 @@
 <?php
-    include 'utils.inc.php';
+include_once 'utils.inc.php';
 
-    page_start('Vanéstarre', ['css/style.css']);
+page_start('Vanéstarre', ['css/style.css']);
 ?>
 
     <div id="backgroundHome">
         <header>
             <div>
-                <a href="#"><img src="assets/logo.png" alt=""></a>
+                <img src="assets/logo.png" alt="logo">
                 <h1 id="title"> Vanéstarre</h1>
             </div>
             <button id="buttonHeader" type="button" class="buttonLogin">Se connecter</button>
@@ -15,14 +15,14 @@
         <section id="home">
             <div id="slogan" class="colum">
                 <h2>
-                    Le plus <strong>beau</strong> des réseaux-sociaux
+                    Le plus <strong>beau</strong> des reseaux sociaux
                     <br>
                     (car c'est le mien)
                 </h2>
-                <img src="assets/Typo.png" id="typo" alt="">
+                <img id="typo" src="assets/Typo.png" id="typo" alt="typo">
             </div>
 
-            <div id="buttonHome" class="colum">
+            <div class="colum">
                 <button type="button" onclick=window.location.href="inscription.php" class="buttonLogin">S'inscrire</button>
                 <button type="button" onclick=window.location.href="inscription.php" class="buttonRegister">Se connecter</button>
             </div>
@@ -44,5 +44,5 @@
     <footer></footer>
 
 <?php
-    page_end()
+page_end()
 ?>

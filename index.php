@@ -58,13 +58,13 @@ function displayPosts($posts, $sessionid) {
     }
 }
 
-if (isset($_SESSION['vanestarre']['userid'],$_SESSION['vanestarre']['password']) && requestUserByIDAndPassword($_SESSION['vanestarre']['userid'],$_SESSION['vanestarre']['password'])->rowCount() != 0) {
-    $sessionid = $_SESSION['vanestarre']['userid'];
-}
-else {
-    $sessionid = 0;
-}
+require_once 'php/connexion_handler.php';
 
 $posts = getPosts();
 
-require_once 'index_View.php';
+if (isset ($sessionid) && $sessionid == 0) {
+    require_once 'unlogged.php';
+}
+else {
+    require_once 'logged.php';
+}

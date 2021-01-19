@@ -2,7 +2,7 @@
     function page_start(/* string */                $title,
                         /* tableau de string */     $css)
     {
-        $favicon = 'assets/favicon.png';
+        $favicon = 'http://loicganne.alwaysdata.net/assets/favicon.png';
 
         echo '<!DOCTYPE html>
               <html lang="fr">
@@ -19,7 +19,7 @@
         echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">';
         echo '<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href=' . $favicon .' type="image/x-icon">';
+        <link rel="shortcut icon" href="' . $favicon .'" type="image/x-icon">';
 
         echo '<title>' . $title . '</title>' . PHP_EOL .
              '</head>' . PHP_EOL .

@@ -3,11 +3,11 @@ include_once '../models/Model.php';
 include_once '../models/reaction_Model.php';
 
 require_once '../header.php';
+require_once 'connexion_handler.php';
 
-if (isset($_POST['t'],$_POST['id']) && !empty($_POST['t']) && !empty($_POST['id']) && $_SESSION['vanestarre']['userid'] != 0) {
+if (isset($_POST['t'], $_POST['id'], $sessionid) && !empty($_POST['t']) && !empty($_POST['id']) && $sessionid != 0) {
     $id = (int) $_POST['id'];
     $t = (int) $_POST['t'];
-    $sessionid = $_SESSION['vanestarre']['userid'];
 
     if ($t >= 1 && $t <= 4) {
         $reaction_table = array('style', 'swag', 'cute', 'love');
