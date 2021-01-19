@@ -15,7 +15,7 @@ function reaction(_infoId){
 }
 
 function changeEmoji(emoji,t,id){
-    const srcPath = "http://localhost:63342/Vanestarre/assets/reaction_";
+    const srcPath = "http://loicganne.alwaysdata.net/assets/reaction_";
     const srcPathShort = "assets/reaction_";
     const tabType = ["style","swag","cute","love"];
     let emojiTemp;
