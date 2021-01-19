@@ -211,7 +211,9 @@ button:hover{
 .postEmoji{
     width: 22px;
 }
-
+.emojiCount{
+    width:10px;
+}
 .postEmoji:hover{
     cursor: pointer;
     transform: scale(1.1);
