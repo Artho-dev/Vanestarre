@@ -2,7 +2,6 @@
 function countChar(){
     var textArea = document.getElementById("writeMessage");
     var countChar = textArea.value.length;
-    console.log(countChar);
     var spanCount = document.getElementById("countCharMessage");
     spanCount.textContent= countChar + "/50";
 }

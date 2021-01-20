@@ -32,13 +32,19 @@ page_start('Vanéstarre', ['css/home.css']);
 
     <div id="sectionPost">
         <div id="newPost">
-            <form id="writeMessageBox">
-                <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" id="writeMessage" maxlength="50" value="" >
-                <div id="writeButtonBox">
-                    <span id="countCharMessage">0/50</span>
-                    <button id="sendButton">Envoyer</button>
-                </div>
-            </form>
+            <?php
+                if ($sessionid == 1){
+                    echo ' 
+                    <form id="writeMessageBox">
+                         <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" id="writeMessage" maxlength="50" value="" >
+                         <div id="writeButtonBox">
+                            <span id="countCharMessage">0/50</span>
+                            <button id="sendButton">Envoyer</button>
+                         </div>
+                    </form>';
+                }
+            ?>
+
 
 
             <?php displayPosts($posts, $sessionid) ?>
