@@ -1,3 +1,11 @@
+
+function countChar(){
+    var textArea = document.getElementById("writeMessage");
+    var countChar = textArea.value.length;
+    console.log(countChar);
+    var spanCount = document.getElementById("countCharMessage");
+    spanCount.textContent= countChar + "/50";
+}
 function reaction(_infoId){
     const ajax = new XMLHttpRequest();
     var emojiId = _infoId.id;

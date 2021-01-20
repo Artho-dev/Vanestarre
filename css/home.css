@@ -26,6 +26,72 @@ header{
     border-style: solid;
     position: fixed;
 }
+.buttonLogin{
+    background-color: white;
+    text-decoration: none;
+    border-color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    height: 40px;
+    color: #ba2df5;
+    border: 0;
+    border-radius: 10px;
+;
+}
+
+.buttonLogin:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #f4f4f4;
+}
+#writeMessage{
+    border: 0;
+    align-self: stretch;
+    height: 50px;
+    border-radius: 20px;
+    color: #ba2df5;
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+#writeMessage::placeholder{
+   color: #ecc0ff;
+}
+
+#writeMessageBox {
+    border: 2px;
+    width: -webkit-fill-available;
+    margin: 20px;
+    border-style: solid;
+    height: max-content;
+    background-color: white;
+    border-color: #f3d6ff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+#writeButtonBox {
+    align-self: flex-end;
+}
+#writeButtonBox span{
+    margin-right: 10px;
+}
+
+#sendButton{
+    align-self: flex-end;
+    background-color: #ba2df5;
+    color:white;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+}
 
 #searchBar{
     border: 2px;
@@ -233,6 +299,8 @@ header div {
 .emojiCount{
     width: 10px;
 }
+
+
 
 @media screen and (max-width: 1084px) {
 

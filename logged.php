@@ -15,7 +15,7 @@ page_start('Vanéstarre', ['css/home.css']);
             <input id="searchBar" type="search">
             <img src="assets/search.png">
         </div>
-        <div id="iconNav">
+        <div id="iconNav" ">
             <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" alt="">
             <img class="iconHeader" id="notificationIcon" src="assets/notification.png" alt="">
             <img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt="">
@@ -32,6 +32,14 @@ page_start('Vanéstarre', ['css/home.css']);
 
     <div id="sectionPost">
         <div id="newPost">
+            <form id="writeMessageBox">
+                <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" id="writeMessage" maxlength="50" value="" >
+                <div id="writeButtonBox">
+                    <span id="countCharMessage">0/50</span>
+                    <button id="sendButton">Envoyer</button>
+                </div>
+            </form>
+
 
             <?php displayPosts($posts, $sessionid) ?>
 
