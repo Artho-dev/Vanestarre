@@ -51,7 +51,7 @@ function displayPosts($posts, $sessionid) {
                 $reactionAttribut= '';
                 $reactionHref = 'href="inscription.php"';
             }
-            echo '<a ', $reactionHref ,'><img class="postEmoji"', $reactionAttribut , 'src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
+            echo '<a ', $reactionHref ,'><img class="postEmoji "', $reactionAttribut , ' src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
             echo '<span class="emojiCount">' , getReactionAmount($id, $reaction_table[$i]) ,'</span>';
         }
         echo '</div></div>';

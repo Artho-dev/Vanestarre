@@ -15,7 +15,7 @@ if(isset($_GET['id'], $_GET['code']) && !empty($_GET['id']) && !empty($_GET['cod
         deleteRegisterConfirmationRequest($id, $code);
 
         //TODO On affiche la View
-        echo '<h1>Inscription Terminée</h1>';
+       require_once 'logged.php';
     }
     else {
         die('Erreur Fatale : Requête inexistante');

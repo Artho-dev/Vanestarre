@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/profile-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/registration.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/reaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/reaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_inscription_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unlogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/unlogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +40,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1n1TumNZgqs62D3uVycF0PzLwxy" />
@@ -47,18 +53,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/home.css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\assets" />
       <recent name="D:\Projet PHP\php" />
       <recent name="D:\Projet PHP\models" />
       <recent name="D:\Projet PHP\css" />
       <recent name="D:\Projet PHP" />
-      <recent name="D:\Projet PHP\assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,7 +87,9 @@
       <workItem from="1610965284052" duration="5442000" />
       <workItem from="1610977128363" duration="9063000" />
       <workItem from="1610986647972" duration="714000" />
-      <workItem from="1611008049428" duration="9224000" />
+      <workItem from="1611008049428" duration="10100000" />
+      <workItem from="1611048751932" duration="562000" />
+      <workItem from="1611067464815" duration="22903000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -223,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610985877855</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add js">
+      <created>1611017294841</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611017294842</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update js">
+      <created>1611051648500</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611051648500</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +280,8 @@
     <MESSAGE value="finition de la completion d'inscription par email" />
     <MESSAGE value="implémentation html du formulaire de connexion dans inscription.php" />
     <MESSAGE value="add js" />
-    <option name="LAST_COMMIT_MESSAGE" value="add js" />
+    <MESSAGE value="update js" />
+    <option name="LAST_COMMIT_MESSAGE" value="update js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -22,7 +22,7 @@ page_start('Vanéstarre', ['css/style.css']);
                 <img id="typo" src="assets/Typo.png" id="typo" alt="typo">
             </div>
 
-            <div class="colum">
+            <div id="buttonHome" class="colum">
                 <button type="button" onclick=window.location.href="inscription.php" class="buttonLogin">S'inscrire</button>
                 <button type="button" onclick=window.location.href="inscription.php" class="buttonRegister">Se connecter</button>
             </div>

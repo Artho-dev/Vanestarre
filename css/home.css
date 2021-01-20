@@ -6,7 +6,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 header{
-    height: 80px;
+    height: 75px;
     display: flex;
     width: 100%;
     background-color: white;
@@ -17,24 +17,43 @@ header{
     font-family: "Poppins", sans-serif;
     margin: 0;
     border: 0;
-    border-bottom: 1px;
-   /* -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.1);*/
+    border-bottom: 2px;
+    border-color: #f3d6ff;
+   /*-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);*/
 
     border-style: solid;
     position: fixed;
-
 }
+
 #searchBar{
     border: 2px;
     border-radius: 10px;
-    border-color: #f8e9ff;
-    background-color:#f8e9ff;
+    border-color: white;
+    background-color:white;
     height: 30px;
-    width: 300px;
+    width: 20vw;
+    padding-left: 5px;
     border-style: solid;
 }
+#searchBar:active{
+    border: 0 ;
+}
+#backgroundSearch{
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px;
+    border-color: #f3d6ff ;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#backgroundSearch img{
+    width: 20px;
+}
+
+
 #backgroundHome{
     background-color: white;
     height: 100vh; 
@@ -59,12 +78,20 @@ header div {
     width: 20px;
     margin-right: 20px;
 }
+#logoutIcon{
+    width: 23px;
+}
+.userHeader{
+    color: #ba2df5;
+    margin-right: 20px;
+    font-size: 15px;
+}
 .iconHeader:hover{
     cursor: pointer;
 }
 .iconPicture{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin: 0px;
     margin-right: 40px;
     clip-path: circle();
@@ -101,7 +128,7 @@ header div {
 #sectionPost{
     display: flex;
     flex-direction: column;
-    background-color: #faf0ff;
+    background-color: #fcf5ff;
     align-items: center;
     justify-content: center;
 }
@@ -109,8 +136,7 @@ header div {
     font-family: "Poppins",sans-serif;
     font-size: 25px;
     align-self: flex-start;
-    padding:50px;
-    padding-top: 150px;
+    padding: 150px 50px 50px;
     color:#37064d;
     font-weight: 400;
 }
@@ -134,15 +160,15 @@ header div {
 }
 .post{
     background-color: white;
-    width: 300px;
+    max-width: 380px;
     padding: 30px;
     height: auto;
     font-family: "Poppins", sans-serif  ;
     display: flex;
-    align-items: center;
+    align-self: stretch;
     border: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: #f3d6ff;
     margin: 20px;
     flex-direction: column;
     border-radius: 20px;
@@ -172,8 +198,8 @@ header div {
 .post p{
     font-size: 18px;
     color: #ba2df5;
-    margin: 0;
-    margin-top:5px;
+    align-self: flex-start;
+    margin: 5px 0 0;
 }
 .profilPicture{
     clip-path: circle();
@@ -181,9 +207,11 @@ header div {
 }
 .postDots{
     width: 20px;
-    position: relative;
     bottom:44px;
     left:110px;
+    margin-bottom: 45px;
+    margin-top: -45px;
+    align-self: flex-end;
 }
 .postDots:hover{
     cursor: pointer;
@@ -191,12 +219,58 @@ header div {
 .postFooter{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 200px;
     padding-top: 30px;
     font-size: 12px;
     align-items: center;
+    margin-top: auto;
+    align-self: flex-end;
 }
 
 .user p {
     font-size: 15px;
 }
+.emojiCount{
+    width: 10px;
+}
+
+@media screen and (max-width: 1084px) {
+
+  .logoHeader{
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    #title{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .logoHeader{
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    #parameterIcon{
+        visibility: hidden;
+        display: none;
+    }
+    #notificationIcon{
+        visibility: hidden;
+        display: none;
+    }
+    #logoutIcon{
+        width: 28px;
+    }
+    .userHeader{
+        visibility: hidden;
+        display: none;
+    }
+    #title{
+        font-size: 22px;
+        display: none;
+    }
+}
+
