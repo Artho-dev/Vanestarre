@@ -15,7 +15,7 @@ function displayOption(_dotsImg){
     }
 }
 function darkModeCss(){
-     const hrefPath = "http://localhost:63342/Vanestarre/css/home.css";
+     const hrefPath = "http://loicganne.alwaysdata.net/css/home.css";
      var style = document.getElementById("style");
      var emoji = document.getElementsByClassName("postEmoji");
      console.log(style.href);
@@ -74,7 +74,7 @@ function reactionDark(_infoId){
 }
 
 function changeEmoji(emoji,t,id){
-    const srcPath = "http://localhost:63342/Vanestarre/assets/reaction_";
+    const srcPath = "http://loicganne.alwaysdata.net/assets/reaction_";
     const srcPathShort = "assets/reaction_";
     const tabType = ["style","swag","cute","love"];
     let emojiTemp;
@@ -166,7 +166,7 @@ function changeEmoji(emoji,t,id){
 
 
 function changeEmojiDark(emoji,t,id){
-    const srcPath = "http://localhost:63342/Vanestarre/assets/reaction_";
+    const srcPath = "http://loicganne.alwaysdata.net/assets/reaction_";
     const srcPathShort = "assets/reaction_";
     const tabType = ["style","swag","cute","love"];
     let emojiTemp;
