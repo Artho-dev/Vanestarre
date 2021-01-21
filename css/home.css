@@ -1,6 +1,7 @@
 html{
     font-family: "Poppins", sans-serif;
     width: 100%;
+
 }
 body{
     font-family: "Poppins", sans-serif;
@@ -22,10 +23,45 @@ header{
    /*-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);*/
-
     border-style: solid;
     position: fixed;
 }
+.interactionBox{
+    display: none;
+    position: absolute;
+    height: auto;
+    background-color: white;
+    font-size: 12px;
+    right: 60px;
+    border: 2px;
+    flex-direction: column;
+    border-color: #f3d6ff;
+    border-style: solid;
+    border-radius: 8px;
+}
+.interactionBox span{
+    border: 0;
+    padding: 10px;
+    border-bottom: 2px;
+    border-color: #f3d6ff;
+    border-style: solid;
+}
+#supprPost{
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+#modifPost{
+    border :0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.interactionBox span:hover{
+    background-color: #f3d6ff;
+    cursor: pointer;
+}
+
+
 .buttonLogin{
     background-color: white;
     text-decoration: none;
@@ -53,6 +89,10 @@ header{
 
 
 }
+#searchBar::placeholder{
+    color: #ecc0ff;
+    font-size: 14px;
+}
 
 #writeMessage::placeholder{
    color: #ecc0ff;
@@ -61,6 +101,7 @@ header{
 #writeMessageBox {
     border: 2px;
     width: -webkit-fill-available;
+    width:  -moz-available;
     margin: 20px;
     border-style: solid;
     height: max-content;
@@ -97,9 +138,11 @@ header{
     border: 2px;
     border-radius: 10px;
     border-color: white;
+    font-weight: 300;
     background-color:white;
     height: 30px;
     width: 20vw;
+    font-size: 14px;
     padding-left: 5px;
     border-style: solid;
 }
@@ -141,11 +184,11 @@ header div {
 }
 
 .iconHeader{
-    width: 20px;
-    margin-right: 20px;
+    width: 22px;
+    margin-right: 23px;
 }
 #logoutIcon{
-    width: 23px;
+    width: 27px;
 }
 .userHeader{
     color: #ba2df5;
@@ -180,6 +223,16 @@ header div {
     width: 100px;
     background-color: #ba2df5;
     height: 300px;
+}
+
+#parameterOption{
+    display: none;
+    color: black;
+    bottom: -30px;
+    right: 255px;
+}
+#darkMode{
+    border: 0;
 }
 .postEmoji{
     width: 22px;
@@ -228,6 +281,7 @@ header div {
     background-color: white;
     max-width: 380px;
     padding: 30px;
+    position: relative;
     height: auto;
     font-family: "Poppins", sans-serif  ;
     display: flex;
@@ -316,10 +370,18 @@ header div {
 
 @media screen and (max-width: 680px) {
 
+    html{
+        width: fit-content;
+        width: -moz-fit-content;
+    }
     .logoHeader{
         width: 60px;
         height: 60px;
         margin-left: 20px;
+    }
+    #newPost{
+        padding-left: 0;
+        padding-right: 0;
     }
     #parameterIcon{
         visibility: hidden;

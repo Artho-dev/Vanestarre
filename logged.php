@@ -12,11 +12,14 @@ page_start('Vanéstarre', ['css/home.css']);
             <h1 id="title"> Vanéstarre</h1>
         </div>
         <div id="backgroundSearch">
-            <input id="searchBar" type="search">
+            <input placeholder="Recherche" id="searchBar" type="search">
             <img src="assets/search.png">
         </div>
         <div id="iconNav" ">
-            <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" alt="">
+            <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" onclick="displayOption(this)" alt="">
+            <div id="parameterOption" class="interactionBox">
+                <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
+            </div>
             <img class="iconHeader" id="notificationIcon" src="assets/notification.png" alt="">
             <img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt="">
             <span class="userHeader">

@@ -38,10 +38,19 @@ function displayPosts($posts, $sessionid) {
                         <h2 class="">' , $user_name , '</h2>
                         <p>@' , $user_username , '</p>
                     </section>
-                </div>
-                <img class="postDots" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>
-                <p>' , $message , '</p>
-                <div class="postFooter">';
+                </div>';
+
+        if ($sessionid == 1){
+            echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
+                  <div class="interactionBox">
+                        <span id="supprPost">Supprimer</span>
+                        <span id="modifPost">Modifier</span>
+                  </div>';
+
+        }
+        echo  '<p>' , $message , '</p>
+               <div class="postFooter">';
+
 
         for ($i=0; $i < count($reaction_table); ++$i) {
             $t = $i+1;

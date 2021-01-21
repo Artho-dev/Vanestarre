@@ -12,7 +12,7 @@
 
         if (isset($css)) {
             for ($i = 0; $i < count($css); ++$i ) {
-                echo '<link rel="stylesheet" href=' . $css[$i] . '>' . PHP_EOL;
+                echo '<link rel="stylesheet" id="style" href=' . $css[$i] . '>' . PHP_EOL;
             }
         }
 
@@ -27,7 +27,7 @@
     }
 
     function page_end() {
-        echo '<script src="js/script.js"></script></body></html>';
+        echo '<script id="script" src="js/script.js" ></script></body></html>';
     }
 
     function getCountries() {
