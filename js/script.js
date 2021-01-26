@@ -38,7 +38,6 @@ function darkModeCss(){
          }
      }
 
-
 }
 
 function reaction(_infoId){
