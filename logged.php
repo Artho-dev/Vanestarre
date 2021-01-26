@@ -59,7 +59,17 @@ page_start('Vanéstarre', ['css/home.css']);
 
     </div>
 
-    <footer></footer>
+    <footer>
+        <div>
+            <button id="leftArrow">
+                <img src="assets/arrow.png">
+            </button>
+            <span id="page" >Page 1 sur 8 </span>
+            <button id="righArrow">
+                <img src="assets/arrow.png"">
+            </button>
+        </div>
+    </footer>
 
 <?php
 page_end()

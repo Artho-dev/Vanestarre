@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html template/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirm_inscription_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connexion_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/connexion_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/connexion_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion_handler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +95,8 @@
       <workItem from="1611153387992" duration="23757000" />
       <workItem from="1611241689651" duration="798000" />
       <workItem from="1611667411403" duration="909000" />
+      <workItem from="1611672088402" duration="7000" />
+      <workItem from="1611672355592" duration="948000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
