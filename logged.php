@@ -12,8 +12,10 @@ page_start('Vanéstarre', ['css/home.css']);
             <h1 id="title"> Vanéstarre</h1>
         </div>
         <div id="backgroundSearch">
-            <input placeholder="Recherche" id="searchBar" type="search">
-            <img src="assets/search.png">
+            <form action="index.php" method="get">
+                <input placeholder="Recherche par Tag" id="searchBar" type="search">
+                <img src="assets/search.png">
+            </form>
         </div>
         <div id="iconNav" ">
             <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" onclick="displayOption(this)" alt="">
@@ -27,7 +29,7 @@ page_start('Vanéstarre', ['css/home.css']);
                     $user = getUserById($sessionid);
                     $user_username = $user['name'];
                     echo $user_username;
-                ;?>
+                ?>
             </span>
             <img class="iconPicture"src="assets/profile-user.png" alt="">
         </div>

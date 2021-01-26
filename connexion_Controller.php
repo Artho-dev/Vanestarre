@@ -50,7 +50,6 @@ if (isset($_POST['login']) && ($_POST['login'] == 'login_page' || $_POST['login'
     else {
         session_start();
         $_SESSION['vanestarre']['userid'] = $user['userid'];
-        $_SESSION['vanestarre']['password'] = $login_password;
         header('Location:index.php');
     }
 }
