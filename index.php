@@ -21,7 +21,6 @@ function getReactionAmount($postid, $type) {
 function displayPosts($posts, $sessionid) {
 
     while( $post = $posts->fetch() ) {
-
         $user = getUserById($post['senderid']);
         $user_username = $user['username'];
         $user_name = $user['name'];
@@ -69,11 +68,16 @@ function displayPosts($posts, $sessionid) {
 
 require_once 'php/connexion_handler.php';
 
-$posts = getPosts();
+if (isset($_GET['tag']) && !empty($_GET['tag'])) {
+    $posts = getPostsByTag($_GET['tag'],1, 2);
+}
+else {
+    $posts = getPosts(3, 2);
+}
 
 if (isset ($sessionid) && $sessionid == 0) {
     require_once 'unlogged.php';
 }
-else {
+elseif (isset ($sessionid)) {
     require_once 'logged.php';
 }

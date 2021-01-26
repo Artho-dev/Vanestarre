@@ -77,11 +77,26 @@ function requestRegisterConfirmationRequestByUseridAndCode($userid, $code) {
     return $req;
 }
 
-function getPosts() {
+function getPosts($page, $limit) {
+    $min = $page * $limit - $limit;
+
     $db = connectDB();
+    $posts = $db->prepare('SELECT * FROM POST ORDER BY creation_date DESC LIMIT :min, :limit');
+    $posts->bindParam(':min', $min, PDO::PARAM_INT);
+    $posts->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $posts->execute();
+    return $posts;
+}
 
-    $posts = $db->query('SELECT * FROM POST ORDER BY creation_date DESC LIMIT 0, 20');
-
+function getPostsByTag($tag, $page, $limit) {
+    $min = $page * $limit - $limit;
+    $tag = 'β'.$tag;
+    $db = connectDB();
+    $posts = $db->prepare('SELECT * FROM POST WHERE INSTR(message, :tag) != 0 ORDER BY creation_date DESC LIMIT :min, :limit');
+    $posts->bindParam(':min', $min, PDO::PARAM_INT);
+    $posts->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $posts->bindParam(':tag', $tag);
+    $posts->execute();
     return $posts;
 }
 
@@ -118,11 +133,11 @@ function requestUserByEmail($mail) {
     return $req;
 }
 
-function requestUserByIDAndPassword($userid, $password) {
+function requestUserByID($userid) {
     $db = connectDB();
 
-    $req = $db->prepare('SELECT userid FROM USER WHERE userid = ? AND password = SHA1(?)');
-    $req->execute(array($userid, $password));
+    $req = $db->prepare('SELECT userid FROM USER WHERE userid = ?');
+    $req->execute(array($userid));
     return $req;
 }
 
