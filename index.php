@@ -24,6 +24,10 @@ function displayPosts($posts, $sessionid) {
         $user = getUserById($post['senderid']);
         $user_username = $user['username'];
         $user_name = $user['name'];
+        $date = $post['creation_date'];
+        $yearDate= substr($date,0, 4);
+        $dayDate= substr($date,5, 2);
+        $monthDate= substr($date,8, 2);
 
         $id = $post['postid'];
         $message = $post['message'];
@@ -43,11 +47,11 @@ function displayPosts($posts, $sessionid) {
             echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
                   <div class="interactionBox">
                         <span id="supprPost">Supprimer</span>
-                        <span id="modifPost">Modifier</span>
+                        <span onclick="modifPost(this)" id="modifPost">Modifier</span>
                   </div>';
-
         }
         echo  '<p>' , $message , '</p>
+               <span class="datePost">'. $dayDate. '/'.$monthDate . '/' . $yearDate .'</span>
                <div class="postFooter">';
 
 

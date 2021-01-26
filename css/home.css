@@ -94,6 +94,12 @@ header{
     font-size: 14px;
 }
 
+#searchButton{
+    border: 0;
+    background-color: white;
+}
+
+
 #writeMessage::placeholder{
    color: #ecc0ff;
 }
@@ -120,7 +126,7 @@ header{
     margin-right: 10px;
 }
 
-#sendButton{
+.sendButton{
     align-self: flex-end;
     background-color: #ba2df5;
     color:white;
@@ -132,6 +138,11 @@ header{
     border-radius: 8px;
     font-family: "Poppins", sans-serif;
     border: 0;
+}
+
+.formModif{
+    display: flex;
+    flex-direction: column;
 }
 
 #searchBar{
@@ -287,6 +298,7 @@ header div {
     font-family: "Poppins", sans-serif  ;
     display: flex;
     align-self: stretch;
+    width: -webkit-fill-available;
     border: 2px;
     border-style: solid;
     border-color: #f3d6ff;
@@ -322,6 +334,22 @@ header div {
     align-self: flex-start;
     margin: 5px 0 0;
 }
+
+.post textarea{
+    font-size: 18px;
+    color: #ba2df5;
+    align-self: flex-start;
+    margin: 5px 0 0;
+    border :2px;
+    margin-bottom: 20px;
+    resize: none;
+    width: -moz-fit-content;
+    width: -webkit-fill-available;
+    border-style: solid;
+    border-color: #f3d6ff;
+    border-radius: 5px;
+}
+
 .profilPicture{
     clip-path: circle();
     width: 60px;
@@ -337,14 +365,21 @@ header div {
 .postDots:hover{
     cursor: pointer;
 }
+
+.datePost{
+    align-self: flex-end;
+    font-size: 12px;
+    padding: 5px;
+    padding-top: 30px;
+    margin-top: auto;
+}
+
 .postFooter{
     display: flex;
     justify-content: space-around;
     width: 200px;
-    padding-top: 30px;
     font-size: 12px;
     align-items: center;
-    margin-top: auto;
     align-self: flex-end;
 }
 

@@ -271,5 +271,36 @@ function changeEmojiDark(emoji,t,id){
             }
             break;
     }
+}
 
+function reloadPage(){
+    document.location.reload();
+}
+
+function modifPost(modifButton){
+    const parentBox = modifButton.parentNode;
+    parentBox.style.display = "none";
+    parentBox.style.di
+
+    var p = parentBox.nextSibling;
+    var formModif = document.createElement("form");
+    var textareaModif = document.createElement("textarea");
+    var buttonModif = document.createElement("button");
+
+    formModif.setAttribute("method", "post");
+    formModif.className = "formModif" ;
+
+
+    textareaModif.value = p.textContent;
+    textareaModif.name = "text";
+
+    buttonModif.textContent = "Modifier";
+    buttonModif.className = "sendButton"
+
+    p.replaceWith(formModif);
+    formModif.appendChild(textareaModif);
+    formModif.appendChild(buttonModif);
+
+
+    modifButton.setAttribute("onclick", "reloadPage()") ;
 }

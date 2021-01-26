@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +97,8 @@
       <workItem from="1611241689651" duration="798000" />
       <workItem from="1611667411403" duration="909000" />
       <workItem from="1611672088402" duration="7000" />
-      <workItem from="1611672355592" duration="948000" />
+      <workItem from="1611672355592" duration="8449000" />
+      <workItem from="1611680949767" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -287,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611193260899</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="footer pagination">
+      <created>1611673581035</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1611673581035</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +335,8 @@
     <MESSAGE value="update ajout barre de recherche" />
     <MESSAGE value="update ajout message 50 char" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="footer pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer pagination" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

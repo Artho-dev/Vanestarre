@@ -14,7 +14,9 @@ page_start('Vanéstarre', ['css/home.css']);
         <div id="backgroundSearch">
             <form action="index.php" method="get">
                 <input placeholder="Recherche par Tag" id="searchBar" type="search">
-                <img src="assets/search.png">
+                <button id="searchButton" >
+                    <img src="assets/search.png">
+                </button>
             </form>
         </div>
         <div id="iconNav" ">
@@ -44,7 +46,7 @@ page_start('Vanéstarre', ['css/home.css']);
                          <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" id="writeMessage" maxlength="50" value="" >
                          <div id="writeButtonBox">
                             <span id="countCharMessage">0/50</span>
-                            <button id="sendButton">Envoyer</button>
+                            <button class="sendButton">Envoyer</button>
                          </div>
                     </form>';
                 }
