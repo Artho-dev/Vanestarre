@@ -41,15 +41,8 @@ page_start('Vanéstarre', ['css/home.css']);
         <div id="newPost">
             <?php
                 if ($sessionid == 1){
-                    echo ' 
-                    <form id="writeMessageBox">
-                         <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" id="writeMessage" maxlength="50" value="" >
-                         <div id="writeButtonBox">
-                            <span id="countCharMessage">0/50</span>
-                            <button class="sendButton">Envoyer</button>
-                         </div>
-                    </form>';
-                }
+					include_once 'php/post_message.php';
+				}
             ?>
 
 
