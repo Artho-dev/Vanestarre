@@ -109,11 +109,11 @@ function getPost($postId)
     return $req->fetch();
 }
 
-function insertPost($userid, $message){
+function insertPost($senderid, $message, $has_image, $image){
 	$db = connectDB();
     try {
-        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, 0, NULL, ?)');
-        $ins->execute(array($userid, $message, date("Y-m-d H:i:s")));
+        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, ?, ?, NOW())');
+        $ins->execute(array($senderid, $message, $has_image, $image));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
