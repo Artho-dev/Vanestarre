@@ -278,6 +278,26 @@ function reloadPage(){
     document.location.reload();
 }
 
+
+
+function supprPost(supprButton){
+    const parentBox = modifButton.parentNode;
+    const ajax = new XMLHttpRequest();
+    var postId =
+    const t = emojiId.substring(0, emojiId.indexOf('_'));
+    const id = emojiId.substring(emojiId.indexOf('_') + 1);
+    ajax.onload = function (){
+
+    };
+    ajax.open("POST", "php/reaction.php",true);
+
+    var sendText = "t=" + t + "&id="+ id;
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    ajax.send(sendText);
+}
+
+
+
 function modifPost(modifButton){
     const parentBox = modifButton.parentNode;
     parentBox.style.display = "none";

@@ -1,8 +1,10 @@
 <?php
-
     include_once '../models/Model.php';
 
-	if(isset($_POST['writeMessage'], $sessionid) && !empty($_POST['writeMessage'] &&  $sessionid != 0){
+	require_once '../header.php';
+	require_once 'connexion_handler.php';
+
+	if(isset($_POST['writeMessage'], $sessionid) && !empty($_POST['writeMessage']) &&  $sessionid != 0){
 		$message = (string) $_POST['writeMessage'];
 		$id = (int) 1;
 		$image = '';

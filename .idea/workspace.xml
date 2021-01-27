@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/modif_message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/delete_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/delete_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/modif_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/modif_message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/post_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/post_message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +100,7 @@
       <workItem from="1611672088402" duration="7000" />
       <workItem from="1611672355592" duration="8449000" />
       <workItem from="1611680949767" duration="10195000" />
-      <workItem from="1611756609965" duration="6187000" />
+      <workItem from="1611756609965" duration="6944000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -314,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611759424439</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update">
+      <created>1611762901388</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1611762901388</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
