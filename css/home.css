@@ -1,12 +1,13 @@
-html{
+html {
     font-family: "Poppins", sans-serif;
     width: 100%;
-
 }
-body{
+
+body {
     font-family: "Poppins", sans-serif;
 }
-header{
+
+header {
     height: 75px;
     display: flex;
     width: 100%;
@@ -20,13 +21,14 @@ header{
     border: 0;
     border-bottom: 2px;
     border-color: #f3d6ff;
-   /*-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
+    /*-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.05);*/
     border-style: solid;
     position: fixed;
 }
-.interactionBox{
+
+.interactionBox {
     display: none;
     position: absolute;
     height: auto;
@@ -39,30 +41,32 @@ header{
     border-style: solid;
     border-radius: 8px;
 }
-.interactionBox span{
+
+.interactionBox span {
     border: 0;
     padding: 10px;
-    border-bottom: 2px;
     border-color: #f3d6ff;
     border-style: solid;
 }
-#supprPost{
+
+.supprPost {
+    border-bottom: 2px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
 }
-#modifPost{
-    border :0;
+
+.modifPost {
+    border: 0;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
 }
 
-.interactionBox span:hover{
-    background-color: #f3d6ff;
+.interactionBox span:hover {
+    background-color: #fcf5ff;
     cursor: pointer;
 }
 
-
-.buttonLogin{
+.buttonLogin {
     background-color: white;
     text-decoration: none;
     border-color: white;
@@ -75,39 +79,38 @@ header{
 ;
 }
 
-.buttonLogin:hover{
+.buttonLogin:hover {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: #f4f4f4;
 }
-#writeMessage{
+
+#writeMessage {
     border: 0;
     align-self: stretch;
     height: 50px;
     border-radius: 20px;
     color: #ba2df5;
     font-family: "Poppins", sans-serif;
-
-
 }
-#searchBar::placeholder{
+
+#searchBar::placeholder {
     color: #ecc0ff;
     font-size: 14px;
 }
 
-#searchButton{
+#searchButton {
     border: 0;
     background-color: white;
 }
 
-
-#writeMessage::placeholder{
-   color: #ecc0ff;
+#writeMessage::placeholder {
+    color: #ecc0ff;
 }
 
 #writeMessageBox {
     border: 2px;
     width: -webkit-fill-available;
-    width:  -moz-available;
+    width: -moz-available;
     margin: 20px;
     border-style: solid;
     height: max-content;
@@ -122,14 +125,15 @@ header{
 #writeButtonBox {
     align-self: flex-end;
 }
-#writeButtonBox span{
+
+#writeButtonBox span {
     margin-right: 10px;
 }
 
-.sendButton{
+.sendButton {
     align-self: flex-end;
     background-color: #ba2df5;
-    color:white;
+    color: white;
     font-size: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -140,122 +144,133 @@ header{
     border: 0;
 }
 
-.formModif{
+.formModif {
     display: flex;
     flex-direction: column;
 }
 
-#searchBar{
+#searchBar {
     border: 2px;
     border-radius: 10px;
     border-color: white;
     font-weight: 300;
-    background-color:white;
+    background-color: white;
     height: 30px;
     width: 20vw;
     font-size: 14px;
     padding-left: 5px;
     border-style: solid;
 }
-#searchBar:active{
-    border: 0 ;
+
+#searchBar:active {
+    border: 0;
 }
-#backgroundSearch{
+
+#backgroundSearch {
     padding-left: 5px;
     padding-right: 5px;
     border: 2px;
-    border-color: #f3d6ff ;
+    border-color: #f3d6ff;
     border-style: solid;
     border-radius: 8px;
 }
 
-#backgroundSearch img{
+#backgroundSearch img {
     width: 20px;
 }
 
-
-#backgroundHome{
+#backgroundHome {
     background-color: white;
-    height: 100vh; 
+    height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-.logoHeader{
+
+.logoHeader {
     width: 70px;
     height: 70px;
     margin-left: 40px;
     margin-bottom: 10px;
 }
+
 header div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.iconHeader{
+.iconHeader {
     width: 22px;
     margin-right: 23px;
 }
-#logoutIcon{
+
+#logoutIcon {
     width: 27px;
 }
-.userHeader{
+
+.userHeader {
     color: #ba2df5;
     margin-right: 20px;
     font-size: 15px;
 }
-.iconHeader:hover{
+
+.iconHeader:hover {
     cursor: pointer;
 }
-.iconPicture{
+
+.iconPicture {
     width: 30px;
     height: 30px;
     margin: 0px;
     margin-right: 40px;
     clip-path: circle();
 }
-.iconPicture:hover{
+
+.iconPicture:hover {
     cursor: pointer;
 }
-#title{
+
+#title {
     font-weight: 400;
     color: #ba2df5;
     font-size: 25px;
     line-height: 80px;
     margin: 0;
-    
 }
-#parameterIcon::after{
+
+#parameterIcon::after {
     content: "";
     position: absolute;
-
     width: 100px;
     background-color: #ba2df5;
     height: 300px;
 }
 
-#parameterOption{
+#parameterOption {
     display: none;
     color: black;
     bottom: -30px;
     right: 255px;
 }
-#darkMode{
+
+#darkMode {
     border: 0;
+    border-radius: 6px;
 }
-.postEmoji{
+
+.postEmoji {
     width: 22px;
 }
 
-.postEmoji:hover{
+.postEmoji:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: 100ms;
-
 }
-#sectionPost{
+
+#sectionPost {
     display: flex;
     flex-direction: column;
     background-color: #fcf5ff;
@@ -263,22 +278,23 @@ header div {
     min-height: 100vh;
     justify-content: center;
 }
-#sectionPostTitle{
-    font-family: "Poppins",sans-serif;
+
+#sectionPostTitle {
+    font-family: "Poppins", sans-serif;
     font-size: 25px;
     align-self: flex-start;
     padding: 150px 50px 50px;
-    color:#37064d;
+    color: #37064d;
     font-weight: 400;
 }
 
-#sectionPostTitle::after{
+#sectionPostTitle::after {
     content: " Vanéstarre";
-    color:#ba2df5;
+    color: #ba2df5;
     font-weight: 400;
 }
 
-#newPost{
+#newPost {
     margin-top: 130px;
     display: flex;
     align-items: center;
@@ -289,13 +305,14 @@ header div {
     padding-left: 50px;
     padding-right: 50px;
 }
-.post{
+
+.post {
     background-color: white;
     max-width: 380px;
     padding: 30px;
     position: relative;
     height: auto;
-    font-family: "Poppins", sans-serif  ;
+    font-family: "Poppins", sans-serif;
     display: flex;
     align-self: stretch;
     width: -webkit-fill-available;
@@ -305,15 +322,15 @@ header div {
     margin: 20px;
     flex-direction: column;
     border-radius: 20px;
-    
 }
-.user h2{
+
+.user h2 {
     font-size: 15px;
     margin: 0;
     color: #37064d;
     font-weight: 600;
-    
 }
+
 .postHeader {
     display: flex;
     justify-content: start;
@@ -321,60 +338,65 @@ header div {
     flex-direction: row;
     align-items: center;
 }
-.user{
+
+.user {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.post p{
+.post p {
     font-size: 18px;
     color: #ba2df5;
     align-self: flex-start;
     margin: 5px 0 0;
 }
 
-.post textarea{
+.post textarea {
     font-size: 18px;
     color: #ba2df5;
     align-self: flex-start;
     margin: 5px 0 0;
-    border :2px;
+    border: 2px;
     margin-bottom: 20px;
     resize: none;
-    width: -moz-fit-content;
+    width: -moz-available;
     width: -webkit-fill-available;
     border-style: solid;
     border-color: #f3d6ff;
     border-radius: 5px;
 }
 
-.profilPicture{
+.profilPicture {
     clip-path: circle();
     width: 60px;
 }
-.postDots{
+
+.postDots {
     width: 20px;
-    bottom:44px;
-    left:110px;
+    bottom: 44px;
+    left: 110px;
     margin-bottom: 45px;
     margin-top: -45px;
     align-self: flex-end;
 }
-.postDots:hover{
+
+.postDots:hover {
     cursor: pointer;
 }
 
-.datePost{
+.datePost {
     align-self: flex-end;
+    padding: 15px;
     font-size: 12px;
-    padding: 5px;
+    padding-right: 5px;
     padding-top: 30px;
+    font-family: 'Poppins', sans-serif;
     margin-top: auto;
 }
 
-.postFooter{
+.postFooter {
     display: flex;
     justify-content: space-around;
     width: 200px;
@@ -386,15 +408,16 @@ header div {
 .user p {
     font-size: 15px;
 }
-.emojiCount{
+
+.emojiCount {
     width: 10px;
 }
 
-
-footer{
+footer {
+    border: 0;
     border-top: 2px;
     border-style: solid;
-    border-color: #f3d6ff ;
+    border-color: #f3d6ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,7 +429,7 @@ footer div {
     align-items: center;
 }
 
-#leftArrow{
+#leftArrow {
     border-radius: 5px;
     display: flex;
     background-color: white;
@@ -424,7 +447,7 @@ footer div {
     width: 20px;
 }
 
-#righArrow{
+#righArrow {
     border-radius: 5px;
     display: flex;
     background-color: white;
@@ -440,58 +463,57 @@ footer div {
 #righArrow img {
     width: 20px;
 }
-#page{
+
+#page {
     font-family: 'Poppins';
     color: #ba2df5;
     font-size: 14px;
     padding-left: 15px;
     padding-right: 15px;
 }
-@media screen and (max-width: 1084px) {
 
-  .logoHeader{
+@media screen and (max-width: 1084px) {
+    .logoHeader {
         width: 60px;
         height: 60px;
         margin-left: 20px;
     }
-    #title{
+    #title {
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 680px) {
-
-    html{
+    html {
         width: fit-content;
         width: -moz-fit-content;
     }
-    .logoHeader{
+    .logoHeader {
         width: 60px;
         height: 60px;
         margin-left: 20px;
     }
-    #newPost{
+    #newPost {
         padding-left: 0;
         padding-right: 0;
     }
-    #parameterIcon{
+    #parameterIcon {
         visibility: hidden;
         display: none;
     }
-    #notificationIcon{
+    #notificationIcon {
         visibility: hidden;
         display: none;
     }
-    #logoutIcon{
+    #logoutIcon {
         width: 28px;
     }
-    .userHeader{
+    .userHeader {
         visibility: hidden;
         display: none;
     }
-    #title{
+    #title {
         font-size: 22px;
         display: none;
     }
 }
-

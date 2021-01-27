@@ -26,8 +26,8 @@ function displayPosts($posts, $sessionid) {
         $user_name = $user['name'];
         $date = $post['creation_date'];
         $yearDate= substr($date,0, 4);
-        $dayDate= substr($date,5, 2);
-        $monthDate= substr($date,8, 2);
+        $monthDate= substr($date,5, 2);
+        $dayDate= substr($date,8, 2);
 
         $id = $post['postid'];
         $message = $post['message'];
@@ -46,8 +46,8 @@ function displayPosts($posts, $sessionid) {
         if ($sessionid == 1){
             echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
                   <div class="interactionBox">
-                        <span id="supprPost">Supprimer</span>
-                        <span onclick="modifPost(this)" id="modifPost">Modifier</span>
+                        <span class="supprPost">Supprimer</span>
+                        <span onclick="modifPost(this)" class="modifPost">Modifier</span>
                   </div>';
         }
         echo  '<p>' , $message , '</p>
@@ -58,12 +58,12 @@ function displayPosts($posts, $sessionid) {
         for ($i=0; $i < count($reaction_table); ++$i) {
             $t = $i+1;
             $reactionHref = '';
-            $reactionAttribut = 'id="'.$t.'_'. $id .'"onclick="reaction(this)"';
+            $reactionAttribut = 'id="'.$t.'_'. $id .'" onclick="reaction(this)"';
             if ($sessionid == 0) {
                 $reactionAttribut= '';
                 $reactionHref = 'href="inscription.php"';
             }
-            echo '<a ', $reactionHref ,'><img class="postEmoji "', $reactionAttribut , ' src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
+            echo '<a ', $reactionHref ,'><img class="postEmoji" ', $reactionAttribut , ' src="assets/reaction_' , checkEmoji($sessionid, $id, $reaction_table[$i]) , '.png" alt=""></a>';
             echo '<span class="emojiCount">' , getReactionAmount($id, $reaction_table[$i]) ,'</span>';
         }
         echo '</div></div>';

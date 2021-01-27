@@ -15,6 +15,8 @@ function displayOption(_dotsImg){
     }
 }
 function darkModeCss(){
+     document.getElementById("darkMode").style.display = "none";
+
      const hrefPath = "http://loicganne.alwaysdata.net/css/home.css";
      var style = document.getElementById("style");
      var emoji = document.getElementsByClassName("postEmoji");
@@ -37,7 +39,6 @@ function darkModeCss(){
              emoji[i].setAttribute("onclick","reaction(this)");
          }
      }
-
 }
 
 function reaction(_infoId){

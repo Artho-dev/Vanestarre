@@ -84,6 +84,7 @@
                                 echo '<option value="' . $countries[$i] . '">' . $countries[$i] . '</option>';
                             } ?>
                         </select>
+                    </div>
                     <div>
                         <label for="conditions">Je confirme avoir lu et j'accepte les conditions d'utilisation inexistantes de ce réseau social:</label>
                         <input type="checkbox" name="conditions" id="conditions" value="accepted">

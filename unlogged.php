@@ -19,12 +19,12 @@ page_start('Vanéstarre', ['css/style.css']);
                     <br>
                     (car c'est le mien)
                 </h2>
-                <img id="typo" src="assets/Typo.png" id="typo" alt="typo">
+                <img id="typo" src="assets/Typo.png" alt="typo">
             </div>
 
             <div id="buttonHome" class="colum">
-                <button type="button" onclick=window.location.href="inscription.php" class="buttonLogin">S'inscrire</button>
-                <button type="button" onclick=window.location.href="inscription.php" class="buttonRegister">Se connecter</button>
+                <button type="button" onclick="window.location.href='inscription.php'" class="buttonLogin">S'inscrire</button>
+                <button type="button" onclick="window.location.href='inscription.php'" class="buttonRegister">Se connecter</button>
             </div>
         </section>
     </div>

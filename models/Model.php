@@ -18,8 +18,8 @@ function connectDB() {
 function insertUser($username, $name, $mail, $password, $birthdate, $country) {
     $db = connectDB();
     try {
-    $ins = $db->prepare('INSERT INTO USER (username, name, mail, password, birth_date, country) VALUES (?, ?, ?, SHA1(?), ?, ?)');
-    $ins->execute(array($username, $name, $mail, $password, $birthdate, $country));
+        $ins = $db->prepare('INSERT INTO USER (username, name, mail, password, birth_date, country) VALUES (?, ?, ?, SHA1(?), ?, ?)');
+        $ins->execute(array($username, $name, $mail, $password, $birthdate, $country));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
@@ -44,6 +44,17 @@ function insertRegisterConfirmationRequest($userid) {
     try {
         $ins = $db->prepare('INSERT INTO INSCRIPTION_CONFIRMATION (userid) VALUES (?)');
         $ins->execute(array($userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
+function insertPost($senderid, $message, $has_image, $image){
+    $db = connectDB();
+    try {
+        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, ?, ?, NOW())');
+        $ins->execute(array($senderid, $message, $has_image, $image));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
