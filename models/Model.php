@@ -109,6 +109,17 @@ function getPost($postId)
     return $req->fetch();
 }
 
+function insertPost($userid, $message){
+	$db = connectDB();
+    try {
+        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, 0, NULL, ?)');
+        $ins->execute(array($userid, $message, date("Y-m-d H:i:s")));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 function getUserById($userid) {
     $db = connectDB();
 
