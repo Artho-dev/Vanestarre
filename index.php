@@ -46,7 +46,7 @@ function displayPosts($posts, $sessionid) {
         if ($sessionid == 1){
             echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
                   <div class="interactionBox">
-                        <span class="supprPost">Supprimer</span>
+                        <span onclick="supprPost(this)" class="supprPost">Supprimer</span>
                         <span onclick="modifPost(this)" class="modifPost">Modifier</span>
                   </div>';
         }

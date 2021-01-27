@@ -281,10 +281,12 @@ function reloadPage(){
 
 
 function supprPost(supprButton){
-    const parentBox = modifButton.parentNode;
+    supprButton.style.display = "none";
+
+    const parentBox = supprButton.parentNode;
     const ajax = new XMLHttpRequest();
 
-    var postId =parentBox().parentElement.id.substring(4);
+    var postId =parentBox.parentElement.id.substring(4);
 
     ajax.onload = function (){
 
@@ -295,6 +297,8 @@ function supprPost(supprButton){
     var sendText = "post_id=" + postId;
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     ajax.send(sendText);
+
+    reloadPage();
 }
 
 
