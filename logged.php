@@ -46,7 +46,7 @@ page_start('Vanéstarre', ['css/home.css']);
 	                            <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" name="writeMessage" id="writeMessage" maxlength="50" value="" >
 	                            <div id="writeButtonBox">
 		                            <span id="countCharMessage">0/50</span>
-		                            <button class="sendButton" name="sendMessage" id="sendButton">Envoyer</button>
+		                            <button type="submit" class="sendButton" name="sendMessage" id="sendButton">Envoyer</button>
                                 </div>
                           </form> ';
 

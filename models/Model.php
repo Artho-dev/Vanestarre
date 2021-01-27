@@ -69,6 +69,18 @@ function deleteRegisterConfirmationRequest($userid, $code) {
     $del = $db->prepare('DELETE FROM INSCRIPTION_CONFIRMATION WHERE userid = ? AND code = ?');
     $del->execute(array($userid, $code));
 }
+//Updaters
+
+function updatePost($postid, $message, $has_image, $image){
+    $db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE POST SET message = ?, has_image = ?, image = ? WHERE postid = ?');
+        $ins->execute(array($message, $has_image, $image, $postid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
 
 //Getters
 

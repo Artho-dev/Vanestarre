@@ -281,25 +281,35 @@ function reloadPage(){
 function modifPost(modifButton){
     const parentBox = modifButton.parentNode;
     parentBox.style.display = "none";
-    parentBox.style.di
+
+    var postId = parentBox.parentElement.id.substring(4);
 
     var p = parentBox.nextSibling;
     var formModif = document.createElement("form");
     var textareaModif = document.createElement("textarea");
+    var idModif = document.createElement("input");
     var buttonModif = document.createElement("button");
 
     formModif.setAttribute("method", "post");
+    formModif.setAttribute("action","php/modif_message.php");
     formModif.className = "formModif" ;
-
 
     textareaModif.value = p.textContent;
     textareaModif.name = "text";
 
+    idModif.value = postId;
+    idModif.name = "post_id";
+    idModif.style.display = "none";
+
     buttonModif.textContent = "Modifier";
     buttonModif.className = "sendButton"
+    buttonModif.value = "edit";
+    buttonModif.name = "editSubmit";
+    buttonModif.setAttribute("type","submit");
 
     p.replaceWith(formModif);
     formModif.appendChild(textareaModif);
+    formModif.appendChild(idModif);
     formModif.appendChild(buttonModif);
 
 
