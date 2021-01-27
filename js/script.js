@@ -283,15 +283,16 @@ function reloadPage(){
 function supprPost(supprButton){
     const parentBox = modifButton.parentNode;
     const ajax = new XMLHttpRequest();
-    var postId =
-    const t = emojiId.substring(0, emojiId.indexOf('_'));
-    const id = emojiId.substring(emojiId.indexOf('_') + 1);
+
+    var postId =parentBox().parentElement.id.substring(4);
+
     ajax.onload = function (){
 
     };
-    ajax.open("POST", "php/reaction.php",true);
 
-    var sendText = "t=" + t + "&id="+ id;
+    ajax.open("POST", "php/delete_message.php",true);
+
+    var sendText = "post_id=" + postId;
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     ajax.send(sendText);
 }
