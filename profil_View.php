@@ -32,9 +32,9 @@ page_start('Vanéstarre', ['css/home.css']);
 </header>
 
 <div id="profilBox">
-    <form method="post" action="" id="profil">
-        <div class="delimiterBottom">
-            <img class="editProfil" onclick="editProfil(this)" src="https://img.icons8.com/material-rounded/24/000000/edit--v3.png" alt=""/>
+    <form method="post" action="php/modif_profile.php" id="profil">
+        <div id="profilDelimiter">
+            <img class="editProfil" onclick="editProfil(this)" src="assets/editPurple.png" alt=""/>
             <img src="assets/picture.PNG" id="profilPictureChange" alt="">
             <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
             <label style="display: none;"  id="labelFile" for="fileChooser">Choisir une image</label>
@@ -67,7 +67,7 @@ page_start('Vanéstarre', ['css/home.css']);
     <?php
         if (getRoleById($sessionid) == 'admin'){
             echo '<form method="post" action="edit_configuration.php" id="config">
-                      <div class="delimiterBottom">
+                      <div id="configDelimiter">
                            <img class="editProfil" onclick="editConfig(this)" src="assets/edit.png" alt=""/>
                             <h2 id="titleConfig">Configuration</h2>
                       </div>

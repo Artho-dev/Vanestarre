@@ -567,21 +567,20 @@ footer div {
 
 #profil{
     background-color: white;
-    max-width: 300px;
+    /* max-width: 300px; */
     position: relative;
-    height: auto;
+    height: fit-content;
     font-family: "Poppins", sans-serif;
     display: flex;
-//align-self: stretch;
-    width: -webkit-fill-available;
+//: ;
+    width: auto;
     border: 2px;
     border-style: solid;
     border-color: #f3d6ff;
     margin: 20px;
-    margin-top: 100px;
-
     align-items: center;
-    flex-direction: column;
+    justify-content: space-around;
+    /* flex-direction: column; */
     border-radius: 20px;
 }
 
@@ -592,7 +591,7 @@ footer div {
     margin: 10px;
     margin-bottom: 30px;
 }
-.delimiterBottom{
+#configDelimiter{
     border: 0;
     border-bottom: 2px;
     border-style: solid;
@@ -603,6 +602,24 @@ footer div {
     align-items: center;
     flex-direction: column;
 }
+
+#profilDelimiter{
+    border: 0;
+    border-right: 2px;
+    align-self: flex-end;
+    border-style: solid;
+    border-color: #f3d6ff;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    height: 580px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
 .nameInfo{
     margin: 0;
     padding-bottom: 10px;
@@ -621,6 +638,7 @@ footer div {
     padding-bottom: 40px;
     padding-top: 40px;
     display: flex;
+    width: 400px;
     flex-direction: column;
     font-size: 15px;
     color: #ba2df5;
@@ -633,8 +651,9 @@ footer div {
 }
 .editProfil {
     width: 20px;
-    margin-top: 30px;
-    margin-right: 30px;
+    margin-top: 25px;
+    margin-right: -380px;
+    z-index: 2;
     align-self: flex-end;
 }
 
@@ -729,7 +748,9 @@ footer div {
     background-color: #faf6ff;
 }
 
-@media screen and (max-width: 1084px) {
+@media screen and (max-width: 1155px) {
+
+
     .logoHeader {
         width: 60px;
         height: 60px;
@@ -738,6 +759,208 @@ footer div {
     #title {
         font-size: 22px;
     }
+
+
+    /* PAGE PROFIL */
+
+
+    #profilBox{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #fcf5ff;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    #follow{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    #profil{
+        background-color: white;
+        max-width: 300px;
+        position: relative;
+        height: auto;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+    //align-self: stretch;
+        width: -webkit-fill-available;
+        border: 2px;
+        border-style: solid;
+        border-color: #f3d6ff;
+        margin: 20px;
+        margin-top: 100px;
+
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    #profilPictureChange{
+        clip-path: circle();
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        margin-bottom: 30px;
+    }
+    #profilDelimiter {
+        border: 0;
+        border-bottom: 2px;
+        border-style: solid;
+        border-color: #f3d6ff;
+        width: inherit;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #configDelimiter {
+        border: 0;
+        border-bottom: 2px;
+        border-style: solid;
+        border-color: #f3d6ff;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .nameInfo{
+        margin: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    #bio{
+        font-size: 16px;
+        margin: 40px;
+        margin-top: 5px;
+        width: auto;
+
+    }
+    #userInfo{
+        padding: 30px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        color: #ba2df5;
+    }
+    #submitProfil{
+        margin-top: 30px;
+    }
+    #submitConfig{
+        margin-top: 30px;
+    }
+    .editProfil {
+        width: 20px;
+        margin-top: 30px;
+        margin-right: 30px;
+        align-self: flex-end;
+    }
+
+    .editProfil:hover {
+        cursor: pointer;
+    }
+
+    .inputEdit{
+        border-radius: 5px;
+        border-style: solid;
+        margin-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        width: 100%;
+        border: 0;
+        background-color: #f8e9ff;
+    }
+
+    .infoUser{
+        border-radius: 5px;
+        border-style: solid;
+        margin-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #3d1e4a;
+        width: 100%;
+        border: 2px;
+        border-style: solid;
+        border-color: #f3d6ff;
+
+        background-color: white;
+    }
+
+    #config{
+        background-color: #ba2df5;
+        max-width: 300px;
+        position: relative;
+        height: auto;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+    //align-self: stretch;
+        width: -webkit-fill-available;
+        margin: 20px;
+        color: white;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+
+    #titleConfig{
+        font-size: 16px;
+        margin: 0;
+        padding: 20px;
+        padding-top: 0px;
+        margin-top: -20px;
+    }
+    #configInfo{
+        padding: 30px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        color: white;
+    }
+
+    .infoConfig{
+        border-radius: 5px;
+        border-style: solid;
+        margin-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: white;
+        width: 100%;
+        border: 2px;
+        border-style: solid;
+        border-color: white;
+
+        background-color: #ba2df5;
+    }
+
+    .inputConfig{
+        border-radius: 5px;
+        border-style: solid;
+        margin-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #3d1e4a;
+        width: 100%;
+        border: 0;
+        background-color: #faf6ff;
+    }
+
 }
 
 @media screen and (max-width: 680px) {

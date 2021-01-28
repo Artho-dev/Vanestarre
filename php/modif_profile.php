@@ -3,7 +3,7 @@
 include_once '../models/Model.php';
 
 
-if(){
+if(true){
 	$username = (string) $_POST['username'];
 	$name = (string) $_POST['name'];
 	$mail = (string) $_POST['mail'];

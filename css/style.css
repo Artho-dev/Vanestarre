@@ -1,6 +1,6 @@
 html{
     font-family: "Poppins", sans-serif;
-    width: 100%;
+    width: auto;
 }
 body{
     font-family: "Poppins", sans-serif;
@@ -16,7 +16,6 @@ header{
     font-family: "Poppins", sans-serif;
     margin: 0;
     border: 0;
-
 }
 #backgroundHome{
     background-color: #c446f8;
@@ -354,6 +353,9 @@ footer div {
 }
 
 @media screen and (max-width: 1084px) {
+    html{
+        width: auto;
+    }
     
    #home    {
        flex-direction: column;
