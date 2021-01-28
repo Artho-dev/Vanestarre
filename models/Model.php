@@ -93,6 +93,17 @@ function updatePost($postid, $message, $has_image, $image){
     }
 }
 
+function updatePasswordById($userid, $password) {
+    $db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE USER SET password = SHA1(?) WHERE userid = ?');
+        $ins->execute(array($password, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 //Getters
 
 function requestRegisterConfirmationRequestByUserid($userid) {

@@ -1,9 +1,9 @@
 <?php
 include_once 'utils.inc.php';
 
-page_start('Mot de Passe Oublié', ['css/inscription.css']);
+page_start('Réinitialisation du Mot de Passe', ['../css/inscription.css']);
 
-define('error_mail', 'E-mail déjà pris');
+define('error_password', 'Mot de passe Incorrect');
 ?>
     <div id="backgroundRegister">
         <header id="registerHead">
@@ -15,14 +15,17 @@ define('error_mail', 'E-mail déjà pris');
 
         <section>
             <div id="connectForm" class="colum">
-                <h2 class="formTitle">Mot de passe oublié</h2>
-                <form action="php/password_recovery.php" method="post" name="forgot_password" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <?php if (isset($invalid_mail) && $invalid_mail) echo '<span class="errorInput">',error_mail,'</span>'; ?>
+                <h2 class="formTitle">Réinitialisation du Mot de Passe</h2>
+                <form action="complete_reset_password.php" method="post" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <div>
-                        <label for="mail">Adresse E-mail :</label>
-                        <input class="inputInscription" type="text" name="mail" id="mail" value="">
+                        <label for="password">Nouveau Mot de Passe :</label>
+                        <input class="inputInscription" type="password" name="password" id="password" value="">
                     </div>
-                    <button class="inputInscription" type="submit" name="forgot_password" value="mail">Envoyer</button>
+                    <div>
+                        <label for="confirm_password">Confirmation Nouveau Mot de Passe :</label>
+                        <input class="inputInscription" type="password" name="confirm_password" id="confirm_password" value="">
+                    </div>
+                    <button class="inputInscription" type="submit" name="reset_password" value="mail">Confirmer</button>
                 </form>
             </div>
         </section>

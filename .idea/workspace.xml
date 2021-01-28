@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Avancement du système d'oubli de mot de passe">
+      <change afterPath="$PROJECT_DIR$/php/complete_reset_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forgotten_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/forgotten_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/password_recovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/password_recovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/reset_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/reset_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reset_password_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/reset_password_View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProblemsViewState">

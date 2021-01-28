@@ -2,7 +2,7 @@
     include_once '../models/password_Model.php';
     include_once '../models/Model.php';
 
-    if (isset($_POST['mail'])) {
+    if (isset($_POST['mail'], $_POST['forgot_password']) && $_POST['forgot_password'] == 'mail') {
 
         if (preg_match('/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/', $_POST['mail']) && requestUserByEmail($_POST['mail'])->rowCount() != 0 && !empty($_POST['mail'])) {
 
