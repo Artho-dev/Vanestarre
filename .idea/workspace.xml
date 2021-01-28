@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/configuration_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/configuration_Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611858436902</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer">
+      <created>1611859260423</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1611859260423</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

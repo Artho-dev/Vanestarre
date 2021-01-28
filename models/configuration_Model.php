@@ -1,6 +1,14 @@
 <?php
 include_once 'Model.php';
 
+function getNbPage() {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT post_per_page FROM CONFIGURATION WHERE id = 1');
+    $req-> execute();
+    return (int) $req->fetch()['post_per_page'];
+}
+
 function updateNbPage($value) {
     $db = connectDB();
 
