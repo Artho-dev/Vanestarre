@@ -66,7 +66,7 @@ page_start('Vanéstarre', ['css/home.css']);
 
     <?php
         if (getRoleById($sessionid) == 'admin'){
-            echo '<form method="post" action="" id="config">
+            echo '<form method="post" action="edit_configuration.php" id="config">
                       <div class="delimiterBottom">
                            <img class="editProfil" onclick="editConfig(this)" src="assets/edit.png" alt=""/>
                             <h2 id="titleConfig">Configuration</h2>

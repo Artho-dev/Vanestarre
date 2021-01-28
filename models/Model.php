@@ -316,7 +316,7 @@ function get_max_reaction() {
 
 function getConfiguration(){
 	$db = connectDB();
-    $req = $db->prepare('SELECT * FROM CONFIGURATION');
+    $req = $db->prepare('SELECT * FROM CONFIGURATION WHERE id = 1');
     $req->execute();
 	return $req->fetch();
 }

@@ -5,7 +5,7 @@ function updateNbPage($value) {
     $db = connectDB();
 
     try {
-        $ins = $db->prepare('UPDATE CONFIGURATION SET post_per_page = ?;');
+        $ins = $db->prepare('UPDATE CONFIGURATION SET post_per_page = ? WHERE id = 1;');
         $ins->execute(array($value));
     }
     catch(Exception $e) {
@@ -17,7 +17,7 @@ function updateMinAlert($value) {
     $db = connectDB();
 
     try {
-        $ins = $db->prepare('UPDATE CONFIGURATION SET min_reaction = ?;');
+        $ins = $db->prepare('UPDATE CONFIGURATION SET min_reaction = ? WHERE id = 1;');
         $ins->execute(array($value));
     }
     catch(Exception $e) {
@@ -29,7 +29,7 @@ function updateMaxAlert($value) {
     $db = connectDB();
 
     try {
-        $ins = $db->prepare('UPDATE CONFIGURATION SET max_reaction = ?;');
+        $ins = $db->prepare('UPDATE CONFIGURATION SET max_reaction = ? WHERE id = 1;');
         $ins->execute(array($value));
     }
     catch(Exception $e) {
