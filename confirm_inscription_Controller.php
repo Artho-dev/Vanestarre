@@ -15,7 +15,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
     if (requestUserByEmail($mail)->rowCount() != 0) $mail = -1;
 
-    if (isset($_POST['password'], $_POST['password_confirm']) && strlen($_POST['password']) > 7) {
+    if (isset($_POST['password'], $_POST['password_confirm']) && strlen($_POST['password']) > 8) {
         $password = $_POST['password'];
         $password_confirm = $_POST['password_confirm'];
     }
