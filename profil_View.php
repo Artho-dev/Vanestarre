@@ -35,13 +35,17 @@ page_start('Vanéstarre', ['css/home.css']);
     <form method="post" action="php/modif_profile.php" id="profil">
         <div id="profilDelimiter">
             <img class="editProfil" onclick="editProfil(this)" src="assets/editPurple.png" alt=""/>
-            <img src="assets/picture.PNG" id="profilPictureChange" alt="">
+            <img <?php if (isset($profil_picture) && !empty($profil_picture)){
+                        echo 'src="'.$profil_picture.'" ';
+                } else{
+                        echo  ' src="assets/picture.PNG" ';
+                 } ?> id="profilPictureChange" alt="">
             <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
             <label style="display: none;"  id="labelFile" for="fileChooser">Choisir une image</label>
             <span style="display: none;" id="filePath" >Aucun fichier sélectionée</span>
             <p id="bio" class="infoUser">
                 <?php if (isset($profil_bio) && !empty($profil_bio)){
-                            echo $user_name;
+                            echo $profil_bio;
                         }
                         else{
                             echo 'Bio ...';

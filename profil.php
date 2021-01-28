@@ -22,9 +22,9 @@ if ($sessionid != 0){
     $config_min_reaction = $config['min_reaction'];
     $config_max_reaction = $config['max_reaction'];
 
-    //$profil = getProfile($sessionid);
-    //$profil_bio = $profil['description'];
-    //$profil_picture = $profil['picture'];
+    $profil = getProfile($sessionid);
+    $profil_bio = $profil['description'];
+    $profil_picture = $profil['picture'];
 
     require_once 'profil_View.php';
 }

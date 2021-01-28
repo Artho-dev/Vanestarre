@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/editPurple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611862481088</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="update pour julien">
+      <created>1611862877547</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1611862877547</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +416,8 @@
     <MESSAGE value="footer pagination" />
     <MESSAGE value="update" />
     <MESSAGE value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
+    <MESSAGE value="update pour julien" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pour julien" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
