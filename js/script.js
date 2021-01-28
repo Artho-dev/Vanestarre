@@ -363,3 +363,7 @@ function modifPost(modifButton){
 
     modifButton.setAttribute("onclick", "reloadPage()") ;
 }
+
+function editProfil(){
+
+}
