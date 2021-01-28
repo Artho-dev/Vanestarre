@@ -80,7 +80,6 @@ function deletePost($postid){
         die('Erreur :'.$e->getMessage());
     }
 }
-
 //Updaters
 
 function updatePost($postid, $message, $has_image, $image){
@@ -222,17 +221,26 @@ function getUserByEmail($mail) {
 }
 
 function get_min_reaction() {
-    $db = connectDB();
-    $req = $db->prepare('SELECT min_reaction FROM CONFIGURATION');
-    $req->execute();
-	$tab = $req->fetch();
-    return $tab[0];
+	$tab = getConfiguration();
+    return $tab[1];
 }
 
 function get_max_reaction() {
-    $db = connectDB();
-    $req = $db->prepare('SELECT max_reaction FROM CONFIGURATION');
+	$tab = getConfiguration();
+    return $tab[2];
+}
+
+function getConfiguration(){
+	$db = connectDB();
+    $req = $db->prepare('SELECT * FROM CONFIGURATION');
+    $req->execute();
+	return $req->fetch();
+}
+	
+
+function get_last_reaction_bitcoin() {
+	$db = connectDB();
+    $req = $db->prepare('SELECT last_reaction_bitcoin FROM POST');
     $req->execute();
 	$tab = $req->fetch();
     return $tab[0];
-}

@@ -21,6 +21,7 @@ if (isset($_POST['t'], $_POST['id'], $sessionid) && !empty($_POST['t']) && !empt
             deleteReaction($sessionid, $id);
             if ($reaction['type'] != $type) {
                 insertReaction($sessionid, $id, $type);
+				//if($type == 'love' && )
             }
         }
         else {
