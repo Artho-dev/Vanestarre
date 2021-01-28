@@ -6,7 +6,7 @@
 
 	if(isset($_POST['writeMessage'], $sessionid) && !empty($_POST['writeMessage']) &&  $sessionid != 0 && getRoleById($sessionid) == 'admin'){
 		$message = (string) $_POST['writeMessage'];
-		$id = (int) 1;
+		$id = $sessionid;
 		$image = '';
 		$errorMsg = null ;
 		$has_image = false;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Ajout des liens par tag">
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Correction Post Message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/post_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/post_message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -382,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611867420835</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Correction Post Message">
+      <created>1611870698046</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1611870698046</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +432,8 @@
     <MESSAGE value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
     <MESSAGE value="update pour julien" />
     <MESSAGE value="Ajout des liens par tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des liens par tag" />
+    <MESSAGE value="Correction Post Message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction Post Message" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

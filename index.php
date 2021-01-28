@@ -64,7 +64,7 @@ function displayPosts($posts, $sessionid) {
                     </section>
                 </div>';
 
-        if ($sessionid == 1){
+        if (getRoleById($sessionid) == 'admin'){
             echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
                   <div class="interactionBox">
                         <span onclick="supprPost(this)" class="supprPost">Supprimer</span>
