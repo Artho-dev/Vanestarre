@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +62,11 @@
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\php" />
-      <recent name="C:\Users\vince\PhpstormProjects\Vanestarre" />
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\profil_picture" />
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\assets" />
       <recent name="D:\Projet PHP\php" />
+      <recent name="D:\Projet PHP\models" />
+      <recent name="D:\Projet PHP\css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -346,21 +346,7 @@
       <option name="project" value="LOCAL" />
       <updated>1611844609826</updated>
     </task>
-    <task id="LOCAL-00036" summary="update">
-      <created>1611846297031</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1611846297031</updated>
-    </task>
-    <task id="LOCAL-00037" summary="update">
-      <created>1611855922883</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1611855922883</updated>
-    </task>
-    <option name="localTasksCounter" value="38" />
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

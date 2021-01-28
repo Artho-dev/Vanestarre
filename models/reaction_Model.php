@@ -32,7 +32,7 @@ function insertReaction($userid, $postid, $type) {
     $db = connectDB();
 
     try {
-        $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid) VALUES (?, ?, ?)');
+        $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid, date) VALUES (?, ?, ?, NOW())');
         $ins->execute(array($type, $postid, $userid));
     }
     catch (Exception $e) {
@@ -45,4 +45,19 @@ function deleteReaction($userid, $postid) {
 
     $del = $db->prepare('DELETE FROM REACTION WHERE postid = ? AND userid = ?');
     $del->execute(array($postid, $userid));
+}
+
+function countReactionByName($postid, $name){
+	$db = connectDB();
+    $req = $db->prepare('SELECT COUNT(*) FROM REACTION WHERE postid = ? AND type = ?');
+    $req->execute(array($postid, $name));
+	$tab = $req->fetch();
+	return $tab[0];
+}
+
+function getLastReactionUser($userid, $number_reaction){
+	$db = connectDB();
+	$req = $db->prepare('SELECT * FROM REACTION WHERE userid = ? ORDER BY date LIMIT 0,?');
+	$req->execute(array($userid, $number_reaction));
+	return $req->fetch();
 }

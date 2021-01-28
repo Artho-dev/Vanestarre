@@ -93,6 +93,82 @@ function updatePost($postid, $message, $has_image, $image){
     }
 }
 
+function updatePasswordById($userid, $password) {
+    $db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE USER SET password = SHA1(?) WHERE userid = ?');
+        $ins->execute(array($password, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
+function updateUsername($userid, $new_username){
+	$db = connectDB();
+	$req = $db->prepare('SELECT COUNT(*) FROM USER WHERE username = ?');
+    $req->execute(array($new_username));
+	$tab = $req->fetch();
+	if($tab[0] == 1) { return false; }
+    try {
+        $ins = $db->prepare('UPDATE USER SET username = ?, WHERE userid = ?');
+        $ins->execute(array($new_username, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+	return true;
+}
+
+function updatePseudo($userid, $new_pseudo){
+	$db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE USER SET name = ?, WHERE userid = ?');
+        $ins->execute(array($new_pseudo, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
+function updateMail($userid, $new_mail){
+	$db = connectDB();
+	$req = $db->prepare('SELECT COUNT(*) FROM USER WHERE mail = ?');
+    $req->execute(array($new_mail));
+	$tab = $req->fetch();
+	if($tab[0] == 1) { return false; }
+    try {
+        $ins = $db->prepare('UPDATE USER SET mail = ?, WHERE userid = ?');
+        $ins->execute(array($new_mail, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+	return true;
+}
+
+function updateBirthday($userid, $new_birthday){
+	$db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE USER SET birth_date = ?, WHERE userid = ?');
+        $ins->execute(array($new_birthday, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
+function updateBio($userid, $new_bio){
+	$db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE PROFILE SET description = ?, WHERE userid = ?');
+        $ins->execute(array($new_bio, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 //Getters
 
 function requestRegisterConfirmationRequestByUserid($userid) {
@@ -115,7 +191,7 @@ function getPosts($page, $limit) {
     $min = $page * $limit - $limit;
 
     $db = connectDB();
-    $posts = $db->prepare('SELECT * FROM POST ORDER BY creation_date DESC LIMIT :min, :limit');
+    $posts = $db->prepare('SELECT * FROM POST ORDER BY creation_date DESC, postid DESC LIMIT :min, :limit');
     $posts->bindParam(':min', $min, PDO::PARAM_INT);
     $posts->bindParam(':limit', $limit, PDO::PARAM_INT);
     $posts->execute();
@@ -243,4 +319,9 @@ function getProfile($userid){
     $req = $db->prepare('SELECT * FROM PROFILE WHERE userid = ?');
     $req->execute(array($userid));
 	return $req->fetch();
+}
+
+function get_last_reaction_bitcoin($postid){
+	$tab = getPost($postid);
+	return $tab[6];
 }
