@@ -425,6 +425,9 @@ function editProfil(editBtn){
     submit.setAttribute("type","submit");
     submit.textContent = "Modifier" ;
     submit.className = "sendButton";
+    submit.value = "config"
+    submit.name = "submit";
+    submit.id = "submitProfil";
 
     userInfo.appendChild(submit);
 
@@ -462,9 +465,13 @@ function editConfig(editBtn){
     var submit = document.createElement("button");
     submit.setAttribute("type","submit");
     submit.textContent = "Modifier" ;
-    submit.className = "sendButton";
+    submit.className = "sendButtonWhite";
+    submit.value = "config"
+    submit.name = "submit";
+    submit.id = "submitConfig";
 
     configInfo.appendChild(submit);
+
 
     editBtn.setAttribute("onclick","reloadPage()");
 }
