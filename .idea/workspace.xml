@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/editPurple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
-    </list>
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Ajout des liens par tag" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +29,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProblemsViewState">
@@ -375,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611862877547</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Ajout des liens par tag">
+      <created>1611867420835</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1611867420835</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +420,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
     <MESSAGE value="update pour julien" />
-    <option name="LAST_COMMIT_MESSAGE" value="update pour julien" />
+    <MESSAGE value="Ajout des liens par tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des liens par tag" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
