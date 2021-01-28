@@ -569,7 +569,7 @@ footer div {
     border-radius: 20px;
 }
 
-.profilPictureChange{
+#profilPictureChange{
     clip-path: circle();
     width: 80px;
     height: 80px;
@@ -593,19 +593,18 @@ footer div {
     padding-top: 10px;
     font-size: 16px;
 }
-.infoUser{
-    color: #3d1e4a;
-    font-size: 15px;
-}
 #bio{
     font-size: 16px;
+    margin: 40px;
+    width: auto;
 
 }
 #userInfo{
     padding: 30px;
     padding-bottom: 40px;
     padding-top: 40px;
-
+    display: flex;
+    flex-direction: column;
     font-size: 15px;
     color: #ba2df5;
 }
@@ -621,7 +620,31 @@ footer div {
     cursor: pointer;
 }
 
+.inputEdit{
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: 100%;
+    border: 0;
+    background-color: #f8e9ff;
+}
 
+.infoUser{
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #3d1e4a;
+    width: 100%;
+    border: 2px;
+    border-style: solid;
+    border-color: #f3d6ff;
+
+    background-color: white;
+}
 
 #config{
     background-color: #ba2df5;
@@ -638,6 +661,8 @@ footer div {
     flex-direction: column;
     border-radius: 20px;
 }
+
+
 #titleConfig{
     font-size: 16px;
     margin: 0;
@@ -656,9 +681,30 @@ footer div {
 }
 
 .infoConfig{
-    color: #f3d6ff;
-    align-self: flex-end;
-    font-size: 15px;
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: white;
+    width: 100%;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+
+    background-color: #ba2df5;
+}
+
+.inputConfig{
+    border-radius: 5px;
+    border-style: solid;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: #3d1e4a;
+    width: 100%;
+    border: 0;
+    background-color: #faf6ff;
 }
 
 @media screen and (max-width: 1084px) {

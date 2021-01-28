@@ -2,7 +2,7 @@
     include_once '../models/Model.php';
 
 	require_once '../header.php';
-	require_once 'connexion_handler.php';
+	require_once '../php/connexion_handler.php';
 
 	if(isset($_POST['writeMessage'], $sessionid) && !empty($_POST['writeMessage']) &&  $sessionid != 0){
 		$message = (string) $_POST['writeMessage'];
@@ -34,6 +34,6 @@
 		if (strlen($message) <= 51 && strlen($message) > 0 &&  $errorMsg == null) {
 			insertPost($id, $message, $has_image, $image);
 		}
-		header('Location: '.$_SERVER['HTTP_REFERER']);
+        header('Location: '.$_SERVER['HTTP_REFERER']);
 	}
 
