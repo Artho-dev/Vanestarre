@@ -53,8 +53,8 @@ function insertRegisterConfirmationRequest($userid) {
 function insertPost($senderid, $message, $has_image, $image){
     $db = connectDB();
     try {
-        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, ?, ?, NOW())');
-        $ins->execute(array($senderid, $message, $has_image, $image));
+        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date, last_reaction_bitcoin) VALUES (?, ?, ?, ?, NOW(), ?)');
+        $ins->execute(array($senderid, $message, $has_image, $image, rand(get_min_reaction(), get_max_reaction())));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
@@ -218,4 +218,20 @@ function getUserByUsername($username) {
 
 function getUserByEmail($mail) {
     return requestUserByEmail($mail)->fetch();
+}
+
+function get_min_reaction() {
+    $db = connectDB();
+    $req = $db->prepare('SELECT min_reaction FROM CONFIGURATION');
+    $req->execute();
+	$tab = $req->fetch();
+    return $tab[0];
+}
+
+function get_max_reaction() {
+    $db = connectDB();
+    $req = $db->prepare('SELECT max_reaction FROM CONFIGURATION');
+    $req->execute();
+	$tab = $req->fetch();
+    return $tab[0];
 }
