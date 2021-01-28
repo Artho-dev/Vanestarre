@@ -31,6 +31,7 @@
                         <label for="login_password">Mot de passe :</label>
                         <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="6">
                     </div>
+                    <a href="forgotten_password.php">Mot de passe oublié?</a>
                     <button class="inputInscription" type="submit" name="login" value="login_page">Se connecter</button>
                 </form>
             </div>
@@ -40,7 +41,7 @@
                 <form action="confirm_inscription_Controller.php" method="post" name="action">
                     <div>
                         <label for="username">Identifiant d'utilisateur* :</label>
-                        <input class="inputInscription" type="text" name="username" id="username"  pattern="[a-z0-9]+" title="Caractères inaccentués minuscules et chiffres seulement" value="<? if (isset($username) && $username != -1) echo $username; ?>">
+                        <input class="inputInscription" type="text" name="username" id="username"  pattern="^[a-z0-9]+$" placeholder="Caractères inaccentués minuscules et chiffres seulement" value="<? if (isset($username) && $username != -1) echo $username; ?>">
                     </div>
                     <? if (isset($username) && $username == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>';
                         elseif (isset($username) && $username == -1) echo '<span class="errorInputInscription">', error_username_taken ,'</span>'; ?>
@@ -57,12 +58,12 @@
                         elseif (isset($mail) && $mail == -1) echo '<span class="errorInputInscription">', error_mail_taken ,'</span>';?>
                     <div>
                         <label for="password">Mot de passe* :</label>
-                        <input class="inputInscription" type="password" name="password" id="password" minlength="6" title="Doit contenir 6 caractères ou plus">
+                        <input class="inputInscription" type="password" name="password" id="password" minlength="8" placeholder="Doit contenir 8 caractères ou plus">
                     </div>
                     <? if (isset($password) && $password == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>'; ?>
                     <div>
                         <label for="password_confirm">Confirmer mot de passe* :</label>
-                        <input class="inputInscription" type="password" name="password_confirm" id="password_confirm" minlength="6">
+                        <input class="inputInscription" type="password" name="password_confirm" id="password_confirm" minlength="8">
                     </div>
                     <?  if (isset($password_confirm) && $password_confirm == "") {
                             echo '<span class="errorInputInscription">', error_empty_field ,'</span>';
