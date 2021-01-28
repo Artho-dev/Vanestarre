@@ -383,6 +383,7 @@ function editProfil(editBtn){
     newBio.setAttribute("maxlength", 80);
     newBio.style.resize = "none" ;
     newBio.value = bio.textContent;
+    newBio.name = "description";
     newBio.className = "inputEdit";
     newBio.id = bio.id;
     bio.replaceWith(newBio);
