@@ -241,6 +241,6 @@ function getConfiguration(){
 function getProfile($userid){
 	$db = connectDB();
     $req = $db->prepare('SELECT * FROM PROFILE WHERE userid = ?');
-    $req->execute($userid);
+    $req->execute(array($userid));
 	return $req->fetch();
 }
