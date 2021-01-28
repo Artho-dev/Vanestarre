@@ -46,7 +46,7 @@ page_start('Vanéstarre', ['css/home.css']);
 	                            <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" name="writeMessage" id="writeMessage" maxlength="50" value="" >
 	                            <div id="writeButtonBox">
 	                                <div id="fileBox">
-	                                    <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg">
+	                                    <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
 	                                    <label id="labelFile" for="fileChooser">Choisir une image</label>
 	                                    <span id="filePath" >Aucun fichier sélectionée</span>
                                     </div>

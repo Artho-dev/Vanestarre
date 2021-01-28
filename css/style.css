@@ -27,37 +27,43 @@ header{
     -o-background-size: cover;
     background-size: cover;
 }
-#newPost{
+#newPost {
+    margin-top: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1200px;
     padding-bottom: 200px;
     padding-left: 50px;
     padding-right: 50px;
 }
 .post{
-    width: 300px;
+    background-color: white;
+    max-width: 380px;
     padding: 30px;
+    position: relative;
     height: auto;
-    font-family: "Poppins", sans-serif  ;
+    font-family: "Poppins", sans-serif;
     display: flex;
-    align-items: center;
+    //align-self: stretch;
+    width: -webkit-fill-available;
     border: 2px;
     border-style: solid;
-    border-color: #df94ff;
+    border-color: #f3d6ff;
     margin: 20px;
     flex-direction: column;
     border-radius: 20px;
     
 }
-.user h2{
+
+.user h2 {
     font-size: 15px;
     margin: 0;
     color: #37064d;
     font-weight: 600;
-    
 }
+
 .postHeader {
     display: flex;
     justify-content: start;
@@ -65,45 +71,80 @@ header{
     flex-direction: row;
     align-items: center;
 }
-.user{
+
+.user {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.post p{
+.post p {
     font-size: 18px;
     color: #ba2df5;
-    margin: 0;
-    margin-top:5px;
+    align-self: flex-start;
+    margin: 5px 0 0;
 }
-.profilPicture{
+
+
+.post textarea {
+    font-size: 18px;
+    color: #ba2df5;
+    align-self: flex-start;
+    margin: 5px 0 0;
+    border: 2px;
+    margin-bottom: 20px;
+    resize: none;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    border-style: solid;
+    border-color: #f3d6ff;
+    border-radius: 5px;
+}
+
+.profilPicture {
     clip-path: circle();
     width: 60px;
 }
-.postDots{
+
+.postDots {
     width: 20px;
-    position: relative;
-    bottom:44px;
-    left:110px;
-}
-.postDots:hover{
-    cursor: pointer;
-}
-.postFooter{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 30px;
-    font-size: 12px;
-    align-items: center;
+    bottom: 44px;
+    left: 110px;
+    margin-bottom: 45px;
+    margin-top: -45px;
+    align-self: flex-end;
 }
 
-.user p{
-    font-size: 15px;
-    margin: 0;
+.postDots:hover {
+    cursor: pointer;
 }
+.imgPost{
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.datePost {
+    align-self: flex-end;
+    padding: 15px;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: auto;
+}
+
+.postFooter {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    font-size: 12px;
+    align-items: center;
+    align-self: flex-end;
+}
+.user p {
+    font-size: 15px;
+}
+
 header img{
     width: 70px;
     height: 70px;
@@ -219,8 +260,14 @@ button:hover{
     transform: scale(1.1);
     transition: 100ms;
 }
+#sectionPost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
 #sectionPostTitle{
+    align-self: flex-start;
     font-family: "Poppins",sans-serif;
     font-size: 27px;
     padding:50px;
@@ -267,7 +314,52 @@ button:hover{
    #buttonHeader{
        margin-right: 20px;
    }
-  } 
+    .logoHeader {
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    #title {
+        font-size: 22px;
+    }
+
+}
+
+
+@media screen and (max-width: 680px) {
+    html {
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+    .logoHeader {
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    #newPost {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #parameterIcon {
+        visibility: hidden;
+        display: none;
+    }
+    #notificationIcon {
+        visibility: hidden;
+        display: none;
+    }
+    #logoutIcon {
+        width: 28px;
+    }
+    .userHeader {
+        visibility: hidden;
+        display: none;
+    }
+    #title {
+        font-size: 22px;
+        display: none;
+    }
+}
 
   
 @-webkit-keyframes slide-top {

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/chat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/delete_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/delete_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/modif_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/modif_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/post_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/post_message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +99,7 @@
       <workItem from="1611672088402" duration="7000" />
       <workItem from="1611672355592" duration="8449000" />
       <workItem from="1611680949767" duration="10195000" />
-      <workItem from="1611756609965" duration="37025000" />
+      <workItem from="1611756609965" duration="40091000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit de la passion">
       <created>1610726095432</created>
@@ -348,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611764883016</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="update">
+      <created>1611800884286</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1611800884286</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
