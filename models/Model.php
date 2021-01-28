@@ -244,3 +244,8 @@ function getProfile($userid){
     $req->execute(array($userid));
 	return $req->fetch();
 }
+
+function get_last_reaction_bitcoin($postid){
+	$tab = getPost($postid);
+	return $tab[6];
+}

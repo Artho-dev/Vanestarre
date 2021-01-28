@@ -46,3 +46,11 @@ function deleteReaction($userid, $postid) {
     $del = $db->prepare('DELETE FROM REACTION WHERE postid = ? AND userid = ?');
     $del->execute(array($postid, $userid));
 }
+
+function countReactionByName($postid, $name){
+	$db = connectDB();
+    $req = $db->prepare('SELECT COUNT(*) FROM REACTION WHERE postid = ? AND type = ?');
+    $req->execute(array($postid, $name));
+	$tab = $req->fetch();
+	return $tab[0];
+}
