@@ -15,6 +15,7 @@ include_once '../models/Model.php';
 
                 $id = $req['userid'];
                 $code = $req['code'];
+                $name = $user['name'];
 
                 //On génère le lien de récupération
                 $website = 'loicganne.alwaysdata.net';
