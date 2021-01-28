@@ -47,7 +47,7 @@ page_start('Vanéstarre', ['css/home.css']);
 	                                <div id="fileBox">
 	                                    <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
 	                                    <label id="labelFile" for="fileChooser">Choisir une image</label>
-	                                    <span id="filePath" >Aucun fichier sélectionée</span>
+	                                    <span id="filePath" >Aucun fichier sélectioné</span>
                                     </div>
 	                             
 	                                <div>   
