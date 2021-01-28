@@ -111,7 +111,7 @@ function updateUsername($userid, $new_username){
 	$tab = $req->fetch();
 	if($tab[0] == 1) { return false; }
     try {
-        $ins = $db->prepare('UPDATE USER SET username = ?, WHERE userid = ?');
+        $ins = $db->prepare('UPDATE USER SET username = ? WHERE userid = ?');
         $ins->execute(array($new_username, $userid));
     }
     catch(Exception $e) {
@@ -123,7 +123,7 @@ function updateUsername($userid, $new_username){
 function updatePseudo($userid, $new_pseudo){
 	$db = connectDB();
     try {
-        $ins = $db->prepare('UPDATE USER SET name = ?, WHERE userid = ?');
+        $ins = $db->prepare('UPDATE USER SET name = ? WHERE userid = ?');
         $ins->execute(array($new_pseudo, $userid));
     }
     catch(Exception $e) {
@@ -138,7 +138,7 @@ function updateMail($userid, $new_mail){
 	$tab = $req->fetch();
 	if($tab[0] == 1) { return false; }
     try {
-        $ins = $db->prepare('UPDATE USER SET mail = ?, WHERE userid = ?');
+        $ins = $db->prepare('UPDATE USER SET mail = ? WHERE userid = ?');
         $ins->execute(array($new_mail, $userid));
     }
     catch(Exception $e) {
@@ -150,7 +150,7 @@ function updateMail($userid, $new_mail){
 function updateBirthday($userid, $new_birthday){
 	$db = connectDB();
     try {
-        $ins = $db->prepare('UPDATE USER SET birth_date = ?, WHERE userid = ?');
+        $ins = $db->prepare('UPDATE USER SET birth_date = ? WHERE userid = ?');
         $ins->execute(array($new_birthday, $userid));
     }
     catch(Exception $e) {
@@ -161,7 +161,7 @@ function updateBirthday($userid, $new_birthday){
 function updateBio($userid, $new_bio){
 	$db = connectDB();
     try {
-        $ins = $db->prepare('UPDATE PROFILE SET description = ?, WHERE userid = ?');
+        $ins = $db->prepare('UPDATE PROFILE SET description = ? WHERE userid = ?');
         $ins->execute(array($new_bio, $userid));
     }
     catch(Exception $e) {
