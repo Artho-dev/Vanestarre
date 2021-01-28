@@ -80,6 +80,7 @@ function deletePost($postid){
         die('Erreur :'.$e->getMessage());
     }
 }
+
 //Updaters
 
 function updatePost($postid, $message, $has_image, $image){
