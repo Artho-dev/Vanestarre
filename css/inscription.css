@@ -105,11 +105,19 @@ form div{
     background-color: #f8e9ff;
 }
 .errorInput{
-    color: rgb(248, 179, 179);
+    color: rgb(248, 115, 115);
     font-size: 12px;
     margin: 0px;
     padding: 0px;
 }
+
+.errorInputInscription{
+    color: red;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+
 #inscriptionForm button{
     background-color: #ba2df5;
     border: 0;

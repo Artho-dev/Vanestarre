@@ -20,10 +20,13 @@ function getReactionAmount($postid, $type) {
 
 function displayPosts($posts, $sessionid) {
 
+
     while( $post = $posts->fetch() ) {
         $user = getUserById($post['senderid']);
         $user_username = $user['username'];
         $user_name = $user['name'];
+        $has_image =(boolean) $post['has_image'];
+        $image =(string) $post['image'];
         $date = $post['creation_date'];
         $yearDate= substr($date,0, 4);
         $monthDate= substr($date,5, 2);
@@ -50,9 +53,13 @@ function displayPosts($posts, $sessionid) {
                         <span onclick="modifPost(this)" class="modifPost">Modifier</span>
                   </div>';
         }
-        echo  '<p>' , $message , '</p>
-               <span class="datePost">'. $dayDate. '/'.$monthDate . '/' . $yearDate .'</span>
-               <div class="postFooter">';
+        echo  '<p>' , $message , '</p>';
+        if ($has_image == true){
+        echo '<img class="imgPost" src="'. $image .'" >';
+        }
+
+        echo '<span class="datePost">'. $dayDate. '/'.$monthDate . '/' . $yearDate .'</span>
+              <div class="postFooter">';
 
 
         for ($i=0; $i < count($reaction_table); ++$i) {
@@ -76,7 +83,7 @@ if (isset($_GET['tag']) && !empty($_GET['tag'])) {
     $posts = getPostsByTag($_GET['tag'],1, 2);
 }
 else {
-    $posts = getPosts(3, 2);
+    $posts = getPosts(1, 10);
 }
 
 if (isset ($sessionid) && $sessionid == 0) {

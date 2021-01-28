@@ -8,14 +8,31 @@
 		$message = (string) $_POST['writeMessage'];
 		$id = (int) 1;
 		$image = '';
-		
-		if (strlen($message) <= 50 && strlen($message) > 0) {
-			$has_image = 1;
-			if(strlen($image) == 0) $has_image = 0;
+		$errorMsg = null ;
+		$has_image = false;
+		//print_r($_FILES['image_file']);
+
+		if($_FILES['image_file']['error'] == 0){
+		    $imageFileName = $_FILES['image_file']['name'];
+            $imageTmpName = $_FILES['image_file']['tmp_name'];
+            $imageExt = explode('.',$imageFileName);
+            $imageExtension = strtolower(end($imageExt));
+            $imageNewName = uniqid("" ,true) . "." . $imageExtension;
+            $imageDestination = 'upload/'. $imageNewName;
+            $imageSize = $_FILES['image_file']['size'];
+
+            if ($imageSize > 500000 ){
+                $errorMsg = "Fichier trop volumineux (500 Ko maximum)";
+            }
+
+            $image = $imageDestination;
+            $has_image = true;
+            move_uploaded_file($imageTmpName,"../" . $imageDestination);
+
+        }
+
+		if (strlen($message) <= 51 && strlen($message) > 0 &&  $errorMsg == null) {
 			insertPost($id, $message, $has_image, $image);
-		}
-		else {
-			echo 'error string_lenght: ' . strlen($message);
 		}
 		header('Location: '.$_SERVER['HTTP_REFERER']);
 	}

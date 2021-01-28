@@ -42,13 +42,22 @@ page_start('Vanéstarre', ['css/home.css']);
             <?php
                 if ($sessionid == 1){
 
-                    echo '<form action="php/post_message.php" method="post" id="writeMessageBox">
+                    echo '<form action="php/post_message.php" method="post" id="writeMessageBox" enctype="multipart/form-data" >
 	                            <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" name="writeMessage" id="writeMessage" maxlength="50" value="" >
 	                            <div id="writeButtonBox">
-		                            <span id="countCharMessage">0/50</span>
-		                            <button type="submit" class="sendButton" name="sendMessage" id="sendButton">Envoyer</button>
-                                </div>
-                          </form> ';
+	                                <div id="fileBox">
+	                                    <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg">
+	                                    <label id="labelFile" for="fileChooser">Choisir une image</label>
+	                                    <span id="filePath" >Aucun fichier sélectionée</span>
+                                    </div>
+	                             
+	                                <div>   
+	                                    <span id="countCharMessage">0/50</span>
+		                                <button type="submit" class="sendButton" name="submit" id="sendButton">Envoyer</button>
+	                                </div>      
+                                </div>';
+                    if (isset($errorMsg) && errorMsg != null) echo '<span class="errorInput">', $errorMsg, '</span>';
+                    echo  '</form> ';
 
 				}
             ?>

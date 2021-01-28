@@ -6,7 +6,12 @@ require_once 'connexion_handler.php';
 
 if(isset($_POST['post_id'], $sessionid) && !empty($_POST['post_id']) &&  $sessionid != 0){
     $postId = (int)$_POST['post_id'];
-    deletePost($postId);
+    $post = getPost($postId);
 
+    if ($post['has_image'] == true ){
+        unlink("../" . $post['image'] );
+    }
+
+    deletePost($postId);
     header('Location: '.$_SERVER['HTTP_REFERER']);
 }

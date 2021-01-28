@@ -14,6 +14,22 @@ function displayOption(_dotsImg){
         _dotsImg.nextElementSibling.style.display =  "none";
     }
 }
+
+function changeFilePath(){
+    var fileInput = document.getElementById("fileChooser").value;
+    var filePath = document.getElementById("filePath");
+    var index = fileInput.lastIndexOf('\\') + 1 ;
+
+    if(fileInput === ""){
+        fileInput = "Aucun fichier sélectionée";
+        filePath.textContent = fileInput;
+    }
+    else {
+        filePath.textContent = fileInput.substring(index);
+    }
+
+}
+
 function darkModeCss(){
      document.getElementById("darkMode").style.display = "none";
 
@@ -275,24 +291,30 @@ function changeEmojiDark(emoji,t,id){
 }
 
 function reloadPage(){
+
     document.location.reload();
+
 }
 
 
 
 function supprPost(supprButton){
-    supprButton.style.display = "none";
+
 
     const parentBox = supprButton.parentNode;
     const ajax = new XMLHttpRequest();
 
+    parentBox.style.display = "none";
+
     var postId =parentBox.parentElement.id.substring(4);
+    //var post = parentBox.parentElement;
+    //post.style.display = "none" ;
 
     ajax.onload = function (){
 
     };
 
-    ajax.open("POST", "php/delete_message.php",true);
+    ajax.open("POST", "php/delete_message.php",false);
 
     var sendText = "post_id=" + postId;
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -321,6 +343,7 @@ function modifPost(modifButton){
 
     textareaModif.value = p.textContent;
     textareaModif.name = "text";
+    textareaModif.setAttribute("maxlength","50");
 
     idModif.value = postId;
     idModif.name = "post_id";
