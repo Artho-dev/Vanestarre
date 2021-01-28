@@ -238,9 +238,9 @@ function getConfiguration(){
 }
 	
 
-function get_last_reaction_bitcoin() {
+function getProfile($userid){
 	$db = connectDB();
-    $req = $db->prepare('SELECT last_reaction_bitcoin FROM POST');
-    $req->execute();
-	$tab = $req->fetch();
-    return $tab[0];
+    $req = $db->prepare('SELECT * FROM PROFILE WHERE userid = ?');
+    $req->execute($userid);
+	return $req->fetch();
+}
