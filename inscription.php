@@ -46,12 +46,12 @@
                         elseif (isset($username) && $username == -1) echo '<span class="errorInputInscription">', error_username_taken ,'</span>'; ?>
                     <div>
                         <label for="name">Pseudonyme* :</label>
-                        <input class="inputInscription" type="text" name="publicname" id="name" value="<? if (isset($name)) echo $name; ?>">
+                        <input class="inputInscription" type="text" name="publicname" id="name" value="">
                     </div>
                     <? if (isset($name) && $name == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>'; ?>
                     <div>
                         <label for="mailadress">Adresse E-mail* :</label>
-                        <input class="inputInscription" type="email" name="mail" id="mailadress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<? if (isset($mail) && $mail != -1) echo $mail; ?>">
+                        <input class="inputInscription" type="email" name="mail" id="mailadress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="">
                     </div>
                     <? if (isset($mail) && $mail == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>';
                         elseif (isset($mail) && $mail == -1) echo '<span class="errorInputInscription">', error_mail_taken ,'</span>';?>
@@ -71,7 +71,7 @@
                             echo '<span class="errorInputInscription">',error_incorrect_password,'</span>'; ?>
                     <div>
                         <label for="birthdate">Date de naissance* :</label>
-                        <input class="inputInscription" type="date" name="birthdate" id="birthdate" value="<? if (isset($birthdate)) echo $birthdate; ?>">
+                        <input class="inputInscription" type="date" name="birthdate" id="birthdate" value="">
                     </div>
                     <? if (isset($birthdate) && $birthdate == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>'; ?>
                     <div>

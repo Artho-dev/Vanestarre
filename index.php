@@ -106,7 +106,7 @@ else {
     $totalPages = getTotalPages($postPerPage);
 }
 
-
+if ($totalPages < $page) die('Erreur: page introuvable');
 
 if (isset ($sessionid) && $sessionid == 0) {
     require_once 'unlogged.php';
