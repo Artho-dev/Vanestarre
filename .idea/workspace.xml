@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Avancement du système d'oubli de mot de passe">
-      <change afterPath="$PROJECT_DIR$/php/complete_reset_password.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgotten_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/forgotten_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/password_recovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/password_recovery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/reset_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/reset_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reset_password_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/reset_password_View.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611844609826</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Avancement du système d'oubli de mot de passe">
+      <created>1611854769614</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1611854769614</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +394,8 @@
     <MESSAGE value="update ajout message 50 char" />
     <MESSAGE value="footer pagination" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Avancement du système d'oubli de mot de passe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avancement du système d'oubli de mot de passe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

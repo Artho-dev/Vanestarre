@@ -126,7 +126,7 @@ function getPosts($page, $limit) {
     $min = $page * $limit - $limit;
 
     $db = connectDB();
-    $posts = $db->prepare('SELECT * FROM POST ORDER BY creation_date DESC LIMIT :min, :limit');
+    $posts = $db->prepare('SELECT * FROM POST ORDER BY creation_date DESC, postid DESC LIMIT :min, :limit');
     $posts->bindParam(':min', $min, PDO::PARAM_INT);
     $posts->bindParam(':limit', $limit, PDO::PARAM_INT);
     $posts->execute();
