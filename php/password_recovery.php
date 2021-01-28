@@ -7,6 +7,7 @@ include_once '../models/Model.php';
         if (preg_match('/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/', $_POST['mail'])) {
             $mail = $_POST['mail'];
             $user = getUserByEmail($_POST['mail']);
+            $userid = user['userid'];
 
             $req = requestPasswordRequestByUserId($userid);
             if ($req->rowCount() != 0) {
