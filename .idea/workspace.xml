@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="SELECTIONE">
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Mot de passe oublié ajout href">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -401,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611875459526</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="SELECTIONE">
+      <created>1611876271700</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1611876271700</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Mot de passe oublié ajout href">
+      <created>1611877242727</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1611877242727</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +436,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modification du nom des assets" />
     <MESSAGE value="Ajout base de donnée" />
     <MESSAGE value="changement du lien de l'image background" />
     <MESSAGE value="ajout de génération lien d'inscription" />
@@ -445,7 +460,8 @@
     <MESSAGE value="Correction Post Message" />
     <MESSAGE value="Correction Message" />
     <MESSAGE value="SELECTIONE" />
-    <option name="LAST_COMMIT_MESSAGE" value="SELECTIONE" />
+    <MESSAGE value="Mot de passe oublié ajout href" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mot de passe oublié ajout href" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
