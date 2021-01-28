@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/chat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/php/deconnexion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/inscription.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/inscription.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirm_inscription_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirm_inscription_Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/delete_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/delete_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/modif_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/modif_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/post_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/post_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/connexion_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connexion_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unlogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/unlogged.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

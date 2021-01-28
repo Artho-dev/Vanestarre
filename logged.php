@@ -13,7 +13,7 @@ page_start('Vanéstarre', ['css/home.css']);
         </div>
         <div id="backgroundSearch">
             <form action="index.php" method="get">
-                <input placeholder="Recherche par Tag" id="searchBar" type="search">
+                <input name="tag" placeholder="Recherche par Tag" id="searchBar" type="search">
                 <button id="searchButton" >
                     <img src="assets/search.png" alt="">
                 </button>
@@ -25,7 +25,7 @@ page_start('Vanéstarre', ['css/home.css']);
                 <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
             </div>
             <img class="iconHeader" id="notificationIcon" src="assets/notification.png" alt="">
-            <img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt="">
+            <a href="php/deconnexion.php"><img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt=""></a>
             <span class="userHeader">
                 <?php
                     $user = getUserById($sessionid);
@@ -40,7 +40,7 @@ page_start('Vanéstarre', ['css/home.css']);
     <div id="sectionPost">
         <div id="newPost">
             <?php
-                if ($sessionid == 1){
+                if ($sessionid == 1) {
 
                     echo '<form action="php/post_message.php" method="post" id="writeMessageBox" enctype="multipart/form-data" >
 	                            <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" name="writeMessage" id="writeMessage" maxlength="50" value="" >
@@ -73,16 +73,26 @@ page_start('Vanéstarre', ['css/home.css']);
 
     <footer>
         <div>
-            <button id="leftArrow">
-                <img src="assets/arrow.png" alt="">
-            </button>
-            <span id="page" >Page 1 sur 8 </span>
-            <button id="righArrow">
-                <img src="assets/arrow.png" alt="">
-            </button>
+            <?php   if ($page > 1) {
+                        $next_page = $page - 1;
+                        $href = 'index.php?page='.$next_page;
+                        if (isset($tag) && !empty($tag)) {
+                            $href .= '&tag='.$tag;
+                        }
+                        echo '<button id="leftArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+                    } ?>
+            <span id="page" >Page <?php echo $page , ' sur ' , $totalPages; ?></span>
+            <?php   if ($page < $totalPages) {
+                        $next_page = $page + 1;
+                        $href = 'index.php?page='.$next_page;
+                        if (isset($tag) && !empty($tag)) {
+                            $href .= '&tag='.$tag;
+                        }
+                        echo '<button id="righArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+                    } ?>
         </div>
     </footer>
 
 <?php
-page_end()
+    page_end()
 ?>

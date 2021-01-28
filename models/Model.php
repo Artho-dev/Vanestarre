@@ -122,6 +122,23 @@ function getPosts($page, $limit) {
     return $posts;
 }
 
+function getPostAmount() {
+    $db = connectDB();
+    $req = $db->prepare('SELECT count(postid) AS postAmount FROM POST');
+    $req->execute();
+    $value = $req->fetch();
+    return (int) $value['postAmount'];
+}
+
+function getPostAmountWithTag($tag) {
+    $db = connectDB();
+    $req = $db->prepare('SELECT count(postid) AS postAmount FROM POST WHERE INSTR(message, :tag) != 0');
+    $req->bindParam(':tag', $tag);
+    $req->execute();
+    $value = $req->fetch();
+    return (int) $value['postAmount'];
+}
+
 function getPostsByTag($tag, $page, $limit) {
     $min = $page * $limit - $limit;
     $tag = 'β'.$tag;
