@@ -435,20 +435,36 @@ function editConfig(editBtn){
     var nbrPage = document.getElementById("nbrPageConfig");
     var minAlert = document.getElementById("minAlert");
     var maxAlert = document.getElementById("maxAlert");
+    var configInfo = document.getElementById("configInfo");
 
     var newNbrPage = document.createElement("input");
     newNbrPage.setAttribute("type","number");
-
+    newNbrPage.name ="nbr_page";
+    newNbrPage.className= "inputConfig";
+    newNbrPage.value = nbrPage.textContent;
+    nbrPage.replaceWith(newNbrPage);
 
     var newMinAlert = document.createElement("input");
-    newNbrPage.setAttribute("type","number");
+    newMinAlert.setAttribute("type","number");
+    newMinAlert.name ="min_alert";
+    newMinAlert.className= "inputConfig";
+    newMinAlert.value = minAlert.textContent;
+    minAlert.replaceWith(newMinAlert);
 
     var newMaxAlert = document.createElement("input");
-    newNbrPage.setAttribute("type","number");
+    newMaxAlert.setAttribute("type","number");
+    newMaxAlert.name ="max_alert";
+    newMaxAlert.className= "inputConfig";
+    newMaxAlert.value = maxAlert.textContent;
+    maxAlert.replaceWith(newMaxAlert);
 
 
+    var submit = document.createElement("button");
+    submit.setAttribute("type","submit");
+    submit.textContent = "Modifier" ;
+    submit.className = "sendButton";
 
-
+    configInfo.appendChild(submit);
 
     editBtn.setAttribute("onclick","reloadPage()");
 }
