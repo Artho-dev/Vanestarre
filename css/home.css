@@ -184,6 +184,20 @@ header {
     border: 0;
 }
 
+.sendButtonWhite {
+    align-self: flex-end;
+    background-color: white;
+    color: #ba2df5;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+}
+
 .formModif {
     display: flex;
     flex-direction: column;
@@ -573,8 +587,8 @@ footer div {
 
 #profilPictureChange{
     clip-path: circle();
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 10px;
     margin-bottom: 30px;
 }
@@ -598,6 +612,7 @@ footer div {
 #bio{
     font-size: 16px;
     margin: 40px;
+    margin-top: 5px;
     width: auto;
 
 }
@@ -610,7 +625,12 @@ footer div {
     font-size: 15px;
     color: #ba2df5;
 }
-
+#submitProfil{
+    margin-top: 30px;
+}
+#submitConfig{
+    margin-top: 30px;
+}
 .editProfil {
     width: 20px;
     margin-top: 30px;
