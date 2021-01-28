@@ -53,8 +53,8 @@ function insertRegisterConfirmationRequest($userid) {
 function insertPost($senderid, $message, $has_image, $image){
     $db = connectDB();
     try {
-        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date) VALUES (?, ?, ?, ?, NOW())');
-        $ins->execute(array($senderid, $message, $has_image, $image));
+        $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date, last_reaction_bitcoin) VALUES (?, ?, ?, ?, NOW(), ?)');
+        $ins->execute(array($senderid, $message, $has_image, $image, rand(get_min_reaction(), get_max_reaction())));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
@@ -80,7 +80,6 @@ function deletePost($postid){
         die('Erreur :'.$e->getMessage());
     }
 }
-
 //Updaters
 
 function updatePost($postid, $message, $has_image, $image){
@@ -220,3 +219,28 @@ function getUserByUsername($username) {
 function getUserByEmail($mail) {
     return requestUserByEmail($mail)->fetch();
 }
+
+function get_min_reaction() {
+	$tab = getConfiguration();
+    return $tab[1];
+}
+
+function get_max_reaction() {
+	$tab = getConfiguration();
+    return $tab[2];
+}
+
+function getConfiguration(){
+	$db = connectDB();
+    $req = $db->prepare('SELECT * FROM CONFIGURATION');
+    $req->execute();
+	return $req->fetch();
+}
+	
+
+function get_last_reaction_bitcoin() {
+	$db = connectDB();
+    $req = $db->prepare('SELECT last_reaction_bitcoin FROM POST');
+    $req->execute();
+	$tab = $req->fetch();
+    return $tab[0];
