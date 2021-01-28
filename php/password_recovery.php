@@ -2,7 +2,7 @@
     include_once '../models/password_Model.php';
 include_once '../models/Model.php';
 
-    if (isset($_POST['mail']) && !($_POST['mail'])) {
+    if (isset($_POST['mail']) && !empty($_POST['mail'])) {
 
         if (preg_match('/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/', $_POST['mail'])) {
             $mail = $_POST['mail'];
