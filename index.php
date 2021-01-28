@@ -19,6 +19,23 @@ function getReactionAmount($postid, $type) {
     return requestReactionsFromPostAndType($postid, $type)->rowCount();
 }
 
+function tagMessage($str) {
+    $array_str = preg_split( '/[\s]/', $str);
+    $new_str = '';
+    for ($i = 0; $i < count($array_str); ++$i) {
+        if (preg_match('/^β[^\s]+$/', $array_str[$i])) {
+            $new_str .= '<a class="tag" href="index.php?tag='.strtolower(substr($array_str[$i], 2, )).'">'.$array_str[$i].'</a>';
+        }
+        else {
+            $new_str .= $array_str[$i];
+        }
+
+        if ($i != count($array_str)-1) $new_str .= ' ';
+    }
+
+    return $new_str;
+}
+
 function displayPosts($posts, $sessionid) {
 
 
@@ -54,7 +71,7 @@ function displayPosts($posts, $sessionid) {
                         <span onclick="modifPost(this)" class="modifPost">Modifier</span>
                   </div>';
         }
-        echo  '<p>' , $message , '</p>';
+        echo  '<p>' , tagMessage($message) , '</p>';
         if ($has_image == true){
         echo '<img class="imgPost" src="'. $image .'" >';
         }
