@@ -40,7 +40,7 @@ page_start('Vanéstarre', ['css/home.css']);
     <div id="sectionPost">
         <div id="newPost">
             <?php
-                if ($sessionid == 1) {
+                if (getRoleById($sessionid) == 'admin') {
 
                     echo '<form action="php/post_message.php" method="post" id="writeMessageBox" enctype="multipart/form-data" >
 	                            <input type="text" placeholder="Ecrire un message ..." onchange="countChar()" name="writeMessage" id="writeMessage" maxlength="50" value="" >

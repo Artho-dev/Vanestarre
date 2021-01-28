@@ -4,7 +4,7 @@
     require_once '../header.php';
     require_once 'connexion_handler.php';
 
-    if(isset($_POST['text'], $_POST['post_id'], $sessionid) && !empty($_POST['text'] && !empty($_POST['post_id']) &&  $sessionid != 0)){
+    if(isset($_POST['text'], $_POST['post_id'], $sessionid) && !empty($_POST['text'] && !empty($_POST['post_id']) &&  $sessionid != 0 && getRoleById($sessionid) == 'admin')){
         $message = (string) $_POST['text'];
         $post_id = (int) $_POST['post_id'];
 

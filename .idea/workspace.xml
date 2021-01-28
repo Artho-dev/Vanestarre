@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/configuration_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/configuration_Model.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -342,7 +346,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611844609826</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer">
+      <created>1611858436902</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1611858436902</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer">
+      <created>1611859260423</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1611859260423</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,18 +400,8 @@
     <MESSAGE value="update ajout message 50 char" />
     <MESSAGE value="footer pagination" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/logged.php</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de vérification du role (admin) pour envoyer un message, modifier et supprimer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

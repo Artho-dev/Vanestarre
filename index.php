@@ -2,6 +2,7 @@
 
 include_once 'models/Model.php';
 include_once 'models/reaction_Model.php';
+include_once 'models/configuration_Model.php';
 
 require_once 'header.php';
 
@@ -87,7 +88,7 @@ function getTotalPagesWithTag($limit, $tag) {
 
 require_once 'php/connexion_handler.php';
 
-$postPerPage = 2;
+$postPerPage = getNbPage();
 
 if (isset($_GET['page']) && !empty($_GET['page'])) {
     $page = (int) $_GET['page'];

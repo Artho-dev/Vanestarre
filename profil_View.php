@@ -65,8 +65,8 @@ page_start('Vanéstarre', ['css/home.css']);
     </form>
 
     <?php
-        if ($sessionid == 1){
-            echo '<form method="post" action="" id="config">
+        if (getRoleById($sessionid) == 'admin'){
+            echo '<form method="post" action="edit_configuration.php" id="config">
                       <div class="delimiterBottom">
                            <img class="editProfil" onclick="editConfig(this)" src="assets/edit.png" alt=""/>
                             <h2 id="titleConfig">Configuration</h2>
@@ -76,7 +76,7 @@ page_start('Vanéstarre', ['css/home.css']);
                         <span id="nbrPageConfig" class="infoConfig">'. $config_page .'</span>
                         <p class="nameInfo">Alerte bitcoin au bout de : </p>
                         <span>min : </span>
-                        <span id="minAlert" class="infoConfig"> '. $config_min_reaction .' </span>
+                        <span id="minAlert" class="infoConfig">'. $config_min_reaction .'</span>
                         <span>max : </span>
                         <span id="maxAlert" class="infoConfig">'.$config_max_reaction . '</span>
                      </div>
