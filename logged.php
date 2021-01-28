@@ -24,7 +24,6 @@ page_start('Vanéstarre', ['css/home.css']);
             <div id="parameterOption" class="interactionBox">
                 <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
             </div>
-            <img class="iconHeader" id="notificationIcon" src="assets/notification.png" alt="">
             <a href="php/deconnexion.php"><img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt=""></a>
             <span class="userHeader">
                 <?php
@@ -68,6 +67,11 @@ page_start('Vanéstarre', ['css/home.css']);
 
         </div>
 
+        <div id="alertBitCoin">
+            <p>Bravo ! Tu es mon fan préféré ! Tu gagne l'honneur de me faire un don de 10 bitcoins</p>
+
+            <button onclick="hideMe(this)" id="btnBitCoin">Oui, Vanestarre je paye !</button>
+        </div>
 
     </div>
 

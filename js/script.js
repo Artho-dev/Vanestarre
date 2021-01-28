@@ -30,6 +30,10 @@ function changeFilePath(){
 
 }
 
+function hideMe(me){
+    me.parentNode.style.display = "none";
+}
+
 function darkModeCss(){
      document.getElementById("darkMode").style.display = "none";
 
@@ -383,6 +387,8 @@ function editProfil(editBtn){
     newBio.setAttribute("maxlength", 80);
     newBio.style.resize = "none" ;
     newBio.value = bio.textContent;
+    console.log(bio.textContent);
+    console.log(newBio.value);
     newBio.name = "description";
     newBio.className = "inputEdit";
     newBio.id = bio.id;

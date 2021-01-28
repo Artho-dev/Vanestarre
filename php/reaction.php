@@ -23,7 +23,7 @@ if (isset($_POST['t'], $_POST['id'], $sessionid) && !empty($_POST['t']) && !empt
                 insertReaction($sessionid, $id, $type);
 				define emoji_bitcoins = 'love';
 				if($type == emoji_bitcoins && get_last_reaction_bitcoin($id) == countReactionByName($id, emoji_bitcoins)){
-					//vend sa maison
+
 				}
             }
         }

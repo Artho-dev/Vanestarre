@@ -22,7 +22,6 @@ page_start('Vanéstarre', ['css/home.css']);
         <div id="parameterOption" class="interactionBox">
             <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
         </div>
-        <img class="iconHeader" id="notificationIcon" src="assets/notification.png" alt="">
         <a href="php/deconnexion.php"><img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt=""></a>
             <span class="userHeader">
                 <?php echo $user_name; ?>
@@ -40,18 +39,19 @@ page_start('Vanéstarre', ['css/home.css']);
                 } else{
                         echo  ' src="assets/picture.PNG" ';
                  } ?> id="profilPictureChange" alt="">
+            <div id="infoName">
+                <span id="username"><?php echo $user_name?></span>
+                <span id="name"><?php echo '@'.$user_username?></span>
+            </div>
             <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
             <label style="display: none;"  id="labelFile" for="fileChooser">Choisir une image</label>
             <span style="display: none;" id="filePath" >Aucun fichier sélectionée</span>
-            <p id="bio" class="infoUser">
-                <?php if (isset($profil_bio) && !empty($profil_bio)){
+            <p id="bio" class="infoUser"><?php if (isset($profil_bio) && !empty($profil_bio)){
                             echo $profil_bio;
                         }
                         else{
                             echo 'Bio ...';
-                        } ?>
-            </p>
-        </div>
+                        } ?></p></div>
         <div id="userInfo">
             <p class="nameInfo">Identitifiant d'utilisateur : </p>
             <span id="usernameProfil" class="infoUser"><?php echo $user_username ?></span>
@@ -72,7 +72,7 @@ page_start('Vanéstarre', ['css/home.css']);
         if (getRoleById($sessionid) == 'admin'){
             echo '<form method="post" action="edit_configuration.php" id="config">
                       <div id="configDelimiter">
-                           <img class="editProfil" onclick="editConfig(this)" src="assets/edit.png" alt=""/>
+                           <img class="editConfig" onclick="editConfig(this)" src="assets/edit.png" alt=""/>
                             <h2 id="titleConfig">Configuration</h2>
                       </div>
                       <div id="configInfo">
