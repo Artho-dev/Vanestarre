@@ -33,7 +33,7 @@ page_start('Vanéstarre', ['css/home.css']);
                     echo $user_username;
                 ?>
             </span>
-            <img class="iconPicture" src="assets/profile-user.png" alt="">
+            <a href="profil.php"><img class="iconPicture" src="profil_picture/profile-user.png" alt=""></a>
         </div>
     </header>
 

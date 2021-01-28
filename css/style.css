@@ -33,7 +33,8 @@ header{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
+    width: -webkit-fill-available;
+    width: -moz-available;
     padding-bottom: 200px;
     padding-left: 50px;
     padding-right: 50px;
@@ -121,6 +122,10 @@ header{
 }
 .imgPost{
     margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    width: -webkit-fill-available;
+    width: -moz-available;
     border-radius: 10px;
 }
 .datePost {
@@ -281,6 +286,73 @@ button:hover{
     color:#ba2df5;
     font-weight: 600;
 }
+
+
+footer {
+    border: 0;
+    border-top: 2px;
+    border-style: solid;
+    border-color: #f3d6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+#leftArrow {
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 2px;
+    width: 40px;
+    border-style: solid;
+    border-color: #f3d6ff;
+}
+
+#leftArrow img {
+    transform: rotate(180deg);
+    width: 20px;
+}
+
+#righArrow {
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 2px;
+    width: 40px;
+    border-style: solid;
+    border-color: #f3d6ff;
+}
+
+#righArrow img {
+    width: 20px;
+}
+#righArrow a{
+    display: flex;
+}
+
+#leftArrow a{
+    display: flex;
+}
+#page {
+    font-family: 'Poppins';
+    color: #ba2df5;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 @media screen and (max-width: 1084px) {
     
    #home    {
