@@ -32,7 +32,7 @@ function insertReaction($userid, $postid, $type) {
     $db = connectDB();
 
     try {
-        $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid) VALUES (?, ?, ?, NOW())');
+        $ins = $db->prepare('INSERT INTO REACTION (type, postid, userid, date) VALUES (?, ?, ?, NOW())');
         $ins->execute(array($type, $postid, $userid));
     }
     catch (Exception $e) {
