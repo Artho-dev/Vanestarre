@@ -41,7 +41,27 @@ page_start('Vanéstarre', ['css/style.css']);
 
     </section>
 
-    <footer></footer>
+    <footer>
+        <div>
+            <?php   if ($page > 1) {
+                $next_page = $page - 1;
+                $href = 'index.php?page='.$next_page;
+                if (isset($tag) && !empty($tag)) {
+                    $href .= '&tag='.$tag;
+                }
+                echo '<button id="leftArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+            } ?>
+            <span id="page" >Page <?php echo $page , ' sur ' , $totalPages; ?></span>
+            <?php   if ($page < $totalPages) {
+                $next_page = $page + 1;
+                $href = 'index.php?page='.$next_page;
+                if (isset($tag) && !empty($tag)) {
+                    $href .= '&tag='.$tag;
+                }
+                echo '<button id="righArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+            } ?>
+        </div>
+    </footer>
 
 <?php
 page_end()

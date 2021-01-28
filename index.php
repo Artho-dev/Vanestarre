@@ -77,14 +77,36 @@ function displayPosts($posts, $sessionid) {
     }
 }
 
+function getTotalPages($limit) {
+    return ceil(getPostAmount()/$limit);
+}
+
+function getTotalPagesWithTag($limit, $tag) {
+    return ceil(getPostAmountWithTag($tag)/$limit);
+}
+
 require_once 'php/connexion_handler.php';
 
-if (isset($_GET['tag']) && !empty($_GET['tag'])) {
-    $posts = getPostsByTag($_GET['tag'],1, 2);
+$postPerPage = 2;
+
+if (isset($_GET['page']) && !empty($_GET['page'])) {
+    $page = (int) $_GET['page'];
 }
 else {
-    $posts = getPosts(1, 10);
+    $page = 1;
 }
+
+if (isset($_GET['tag']) && !empty($_GET['tag'])) {
+    $posts = getPostsByTag($_GET['tag'], $page, $postPerPage);
+    $tag = $_GET['tag'];
+    $totalPages = getTotalPagesWithTag($postPerPage, $tag);
+}
+else {
+    $posts = getPosts($page, $postPerPage);
+    $totalPages = getTotalPages($postPerPage);
+}
+
+if ($totalPages < $page) die('Erreur: page introuvable');
 
 if (isset ($sessionid) && $sessionid == 0) {
     require_once 'unlogged.php';

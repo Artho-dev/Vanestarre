@@ -5,13 +5,13 @@ include 'models/Model.php';
 if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
     //Vérification de la non-existance et de la justesse de chaque variable
-    if (isset($_POST['username']) && preg_match($_POST['username'], '[a-z0-9]+')) $username = $_POST['username'];
+    if (isset($_POST['username']) && preg_match('/[a-z0-9]+/', $_POST['username'])) $username = $_POST['username'];
 
     if (requestUserByUsername($username)->rowCount() != 0) $username = -1;
 
     if (isset($_POST['publicname'])) $name = $_POST['publicname'];
 
-    if (isset($_POST['mail']) && preg_match($_POST['mail'],'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')) $mail = $_POST['mail'];
+    if (isset($_POST['mail']) && preg_match('/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/', $_POST['mail'])) $mail = $_POST['mail'];
 
     if (requestUserByEmail($mail)->rowCount() != 0) $mail = -1;
 
