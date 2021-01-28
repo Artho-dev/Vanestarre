@@ -171,6 +171,14 @@ function updateBio($userid, $new_bio){
 
 //Getters
 
+function getRoleById($id) {
+    $db = connectDB();
+
+    $req = $db->prepare('SELECT role FROM USER WHERE userid = ?');
+    $req->execute(array($id));
+    return $req->fetch()['role'];
+}
+
 function requestRegisterConfirmationRequestByUserid($userid) {
     $db = connectDB();
 
