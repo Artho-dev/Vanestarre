@@ -10,7 +10,7 @@ include_once '../models/Model.php';
             $userid = user['userid'];
 
             $req = requestPasswordRequestByUserId($userid);
-            if ($req->rowCount() != 0) {
+            if ($req->rowCount() == 0) {
                 insertPasswordRequest($userid);
                 $req = requestPasswordRequestByUserId($userid)->fetch();
 
