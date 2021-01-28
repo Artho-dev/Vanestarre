@@ -364,6 +364,107 @@ function modifPost(modifButton){
     modifButton.setAttribute("onclick", "reloadPage()") ;
 }
 
-function editProfil(){
+function editProfil(editBtn){
+    var bio = document.getElementById("bio");
+    var picture = document.getElementById("profilPictureChange");
+    var name = document.getElementById("nameProfil");
+    var username = document.getElementById("usernameProfil");
+    var mail = document.getElementById("mailProfil");
+    var birth = document.getElementById("birthProfil");
+    var userInfo = document.getElementById("userInfo");
+    var profil = document.getElementById("profil");
 
+    var label = document.getElementById("labelFile");
+    var span = document.getElementById("filePath");
+    label.style.display = "inline-block";
+    span.style.display = "block";
+
+    var newBio = document.createElement("textarea");
+    newBio.setAttribute("maxlength", 80);
+    newBio.style.resize = "none" ;
+    newBio.value = bio.textContent;
+    newBio.className = "inputEdit";
+    newBio.id = bio.id;
+    bio.replaceWith(newBio);
+
+    var newPicture = document.createElement("label");
+
+
+    var newName = document.createElement("input");
+    newName.setAttribute("type","text");
+    newName.name = "name";
+    newName.value = name.textContent;
+    newName.className = "inputEdit";
+    name.replaceWith(newName);
+
+    var newUsername = document.createElement("input");
+    newUsername.setAttribute("type","text");
+    newUsername.setAttribute("title","Caractères inaccentués minuscules et chiffres seulement");
+    newUsername.setAttribute("pattern", "[a-z0-9]+");
+    newUsername.name = "username";
+    newUsername.value = username.textContent;
+    newUsername.className = "inputEdit";
+    username.replaceWith(newUsername);
+
+    var newMail  =document.createElement("input");
+    newMail.setAttribute("type","email");
+    newMail.setAttribute("pattern", "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$");
+    newMail.name = "mail";
+    newMail.value = mail.textContent;
+    newMail.className = "inputEdit";
+    mail.replaceWith(newMail);
+
+    var newBirth = document.createElement("input");
+    newBirth.setAttribute("type","date");
+    newBirth.value = birth.textContent;
+    newBirth.name = "birthdate";
+    newBirth.className = "inputEdit";
+    birth.replaceWith(newBirth);
+
+    var submit = document.createElement("button");
+    submit.setAttribute("type","submit");
+    submit.textContent = "Modifier" ;
+    submit.className = "sendButton";
+
+    userInfo.appendChild(submit);
+
+    editBtn.setAttribute("onclick", "reloadPage()") ;
+}
+
+function editConfig(editBtn){
+    var nbrPage = document.getElementById("nbrPageConfig");
+    var minAlert = document.getElementById("minAlert");
+    var maxAlert = document.getElementById("maxAlert");
+    var configInfo = document.getElementById("configInfo");
+
+    var newNbrPage = document.createElement("input");
+    newNbrPage.setAttribute("type","number");
+    newNbrPage.name ="nbr_page";
+    newNbrPage.className= "inputConfig";
+    newNbrPage.value = nbrPage.textContent;
+    nbrPage.replaceWith(newNbrPage);
+
+    var newMinAlert = document.createElement("input");
+    newMinAlert.setAttribute("type","number");
+    newMinAlert.name ="min_alert";
+    newMinAlert.className= "inputConfig";
+    newMinAlert.value = minAlert.textContent;
+    minAlert.replaceWith(newMinAlert);
+
+    var newMaxAlert = document.createElement("input");
+    newMaxAlert.setAttribute("type","number");
+    newMaxAlert.name ="max_alert";
+    newMaxAlert.className= "inputConfig";
+    newMaxAlert.value = maxAlert.textContent;
+    maxAlert.replaceWith(newMaxAlert);
+
+
+    var submit = document.createElement("button");
+    submit.setAttribute("type","submit");
+    submit.textContent = "Modifier" ;
+    submit.className = "sendButton";
+
+    configInfo.appendChild(submit);
+
+    editBtn.setAttribute("onclick","reloadPage()");
 }
