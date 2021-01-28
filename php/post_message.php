@@ -10,7 +10,6 @@
 		$image = '';
 		$errorMsg = null ;
 		$has_image = false;
-		//print_r($_FILES['image_file']);
 
 		if($_FILES['image_file']['error'] == 0){
 		    $imageFileName = $_FILES['image_file']['name'];

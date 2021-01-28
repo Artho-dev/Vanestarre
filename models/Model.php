@@ -50,11 +50,11 @@ function insertRegisterConfirmationRequest($userid) {
     }
 }
 
-function insertPost($senderid, $message, $has_image, $image){
+function insertPost($senderid, $message, $has_image, $image) {
     $db = connectDB();
     try {
         $ins = $db->prepare('INSERT INTO POST (senderid, message, has_image, image, creation_date, last_reaction_bitcoin) VALUES (?, ?, ?, ?, NOW(), ?)');
-        $ins->execute(array($senderid, $message, $has_image, $image, rand(get_min_reaction(), get_max_reaction())));
+        $ins->execute(array($senderid, $message, $has_image, $image, random_int(get_min_reaction(), get_max_reaction())));
     }
     catch(Exception $e) {
         die('Erreur : '.$e->getMessage());
@@ -305,13 +305,11 @@ function getUserByEmail($mail) {
 }
 
 function get_min_reaction() {
-	$tab = getConfiguration();
-    return $tab[1];
+    return (int) getConfiguration()['min_reaction'];
 }
 
 function get_max_reaction() {
-	$tab = getConfiguration();
-    return $tab[2];
+    return (int) getConfiguration()['max_reaction'];
 }
 
 function getConfiguration(){
