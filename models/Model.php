@@ -169,6 +169,17 @@ function updateBio($userid, $new_bio){
     }
 }
 
+function updateImage($userid, $paths_img){
+	$db = connectDB();
+    try {
+        $ins = $db->prepare('UPDATE PROFILE SET picture = ? WHERE userid = ?');
+        $ins->execute(array($paths_img, $userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 //Getters
 
 function getRoleById($id) {
