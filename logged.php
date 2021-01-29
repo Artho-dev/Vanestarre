@@ -8,7 +8,7 @@ page_start('Vanéstarre', ['css/home.css']);
 
     <header>
         <div>
-            <img class="logoHeader" src="assets/logoPurple.png" alt="logo">
+            <a href="index.php"><img class="logoHeader" src="assets/logoPurple.png" alt="logo"></a>
             <h1 id="title"> Vanéstarre</h1>
         </div>
         <div id="backgroundSearch">

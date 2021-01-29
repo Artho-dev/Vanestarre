@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="SELECTIONE">
-      <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -57,7 +57,15 @@ function displayPosts($posts, $sessionid) {
 
         echo '<div class="post" id="post',$id,'">
                 <div class="postHeader">
-                    <img src="assets/picture.PNG" class="profilPicture" alt="">
+                    <img ';
+        $profil = getProfile($user['userid']);
+        $profil_picture = $profil['picture'];
+        if (isset($profil_picture) && !empty($profil_picture)){
+            echo 'src="'.$profil_picture.'" ';
+        } else{
+            echo  'src="profil_picture/profile-user.png" ';
+        }
+             echo 'class="profilPicture" alt="">
                     <section class="user">
                         <h2 class="">' , $user_name , '</h2>
                         <p>@' , $user_username , '</p>

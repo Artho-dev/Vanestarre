@@ -34,32 +34,6 @@ function hideMe(me){
     me.parentNode.style.display = "none";
 }
 
-function darkModeCss(){
-     document.getElementById("darkMode").style.display = "none";
-
-     const hrefPath = "http://loicganne.alwaysdata.net/css/home.css";
-     var style = document.getElementById("style");
-     var emoji = document.getElementsByClassName("postEmoji");
-     console.log(style.href);
-     if(style.href === hrefPath){
-         style.setAttribute("href","css/darkMode.css");
-         console.log(emoji[0].src) ;
-         for(let i = 0; i < emoji.length ; ++i){
-             if (emoji[i].src.indexOf('C') === -1){
-                 emoji[i].style.filter = "invert()";
-             }
-             emoji[i].setAttribute("onclick","reactionDark(this)");
-         }
-     }else{
-         style.setAttribute("href","css/home.css");
-         for(let i = 0; i < emoji.length ; ++i){
-             if (emoji[i].src.indexOf('C') === -1){
-                 emoji[i].style.filter = "none";
-             }
-             emoji[i].setAttribute("onclick","reaction(this)");
-         }
-     }
-}
 
 function reaction(_infoId){
     const ajax = new XMLHttpRequest();
@@ -74,8 +48,9 @@ function reaction(_infoId){
 
     ajax.onreadystatechange = function() {
         if (ajax.readyState == XMLHttpRequest.DONE) {
-            displayAlert =Boolean(ajax.responseText.charAt(ajax.responseText.length-1)) ;
-            if (displayAlert == true){
+            displayAlert =(ajax.responseText.charAt(ajax.responseText.length-1)) ;
+            console.log(ajax.responseText);
+            if (displayAlert == '1'){
                 document.getElementById("alertBitCoin").style.display = "flex";
             }
         }
