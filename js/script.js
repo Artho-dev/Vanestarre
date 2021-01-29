@@ -32,6 +32,7 @@ function changeFilePath(){
 
 function hideMe(me){
     me.parentNode.style.display = "none";
+    document.location.href="https://www.paypal.com/paypalme/VixxTV";
 }
 
 

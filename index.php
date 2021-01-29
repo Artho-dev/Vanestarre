@@ -132,7 +132,9 @@ else {
     $totalPages = getTotalPages($postPerPage);
 }
 
-if ($totalPages < $page) die('Erreur: page introuvable');
+if ($totalPages < $page){
+    require 'error_404_View.php';
+}
 
 if (isset ($sessionid) && $sessionid == 0) {
     require_once 'unlogged.php';
