@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="Correction Message">
-      <change afterPath="$PROJECT_DIR$/profil_picture/profile_picture_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/darkMode.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logged.php" beforeDir="false" afterPath="$PROJECT_DIR$/logged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/modif_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/modif_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/reaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/reaction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil_View.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil_View.php" afterDir="false" />
+    <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="SELECTIONE">
+      <change beforePath="$PROJECT_DIR$/php/complete_registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/complete_registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +31,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProblemsViewState">
@@ -402,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611874941084</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="SELECTIONE">
+      <created>1611875459526</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1611875459526</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implémentation html de inscription.php" />
     <MESSAGE value="Modification du nom des assets" />
     <MESSAGE value="Ajout base de donnée" />
     <MESSAGE value="changement du lien de l'image background" />
@@ -446,7 +444,8 @@
     <MESSAGE value="Ajout des liens par tag" />
     <MESSAGE value="Correction Post Message" />
     <MESSAGE value="Correction Message" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction Message" />
+    <MESSAGE value="SELECTIONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="SELECTIONE" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

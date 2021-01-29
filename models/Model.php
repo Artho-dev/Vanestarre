@@ -26,6 +26,17 @@ function insertUser($username, $name, $mail, $password, $birthdate, $country) {
     }
 }
 
+function insertProfile($userid) {
+    $db = connectDB();
+    try {
+        $ins = $db->prepare('INSERT INTO PROFILE (userid) VALUES (?)');
+        $ins->execute(array($userid));
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+}
+
 function setUserTemporaryById($userid, $value) {
     $db = connectDB();
 
