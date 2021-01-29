@@ -10,7 +10,6 @@ page_start('Vanéstarre', ['css/style.css']);
                 <img src="assets/logo.png" alt="logo">
                 <h1 id="title"> Vanéstarre</h1>
             </div>
-            <button id="buttonHeader" type="button" class="buttonLogin">Se connecter</button>
         </header>
         <section id="home">
             <div id="slogan" class="colum">
@@ -49,7 +48,7 @@ page_start('Vanéstarre', ['css/style.css']);
                 if (isset($tag) && !empty($tag)) {
                     $href .= '&tag='.$tag;
                 }
-                echo '<button id="leftArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+                echo '<button id="leftArrow" onclick="window.location.href=\'',$href,'\'"><img src="assets/arrow.png" alt=""></button>';
             } ?>
             <span id="page" >Page <?php echo $page , ' sur ' , $totalPages; ?></span>
             <?php   if ($page < $totalPages) {
@@ -58,7 +57,7 @@ page_start('Vanéstarre', ['css/style.css']);
                 if (isset($tag) && !empty($tag)) {
                     $href .= '&tag='.$tag;
                 }
-                echo '<button id="righArrow"><a href="' , $href , '"><img src="assets/arrow.png" alt=""></a></button>';
+                echo '<button id="rightArrow" onclick="window.location.href=\'',$href,'\'"><img src="assets/arrow.png" alt=""></button>';
             } ?>
         </div>
     </footer>

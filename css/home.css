@@ -563,7 +563,7 @@ footer div {
     width: 20px;
 }
 
-#righArrow {
+#rightArrow {
     border-radius: 5px;
     display: flex;
     background-color: white;
@@ -576,10 +576,10 @@ footer div {
     border-color: #f3d6ff;
 }
 
-#righArrow img {
+#rightArrow img {
     width: 20px;
 }
-#righArrow a{
+#rightArrow a{
     display: flex;
 }
 

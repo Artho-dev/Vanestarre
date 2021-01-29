@@ -72,7 +72,7 @@ function displayPosts($posts, $sessionid) {
                     </section>
                 </div>';
 
-        if (getRoleById($sessionid) == 'admin'){
+        if ($sessionid != 0 && getRoleById($sessionid) == 'admin'){
             echo '<img class="postDots" onclick="displayOption(this)" src="https://img.icons8.com/material-rounded/24/000000/menu-2.png" alt=""/>  
                   <div class="interactionBox">
                         <span onclick="supprPost(this)" class="supprPost">Supprimer</span>
@@ -81,7 +81,7 @@ function displayPosts($posts, $sessionid) {
         }
         echo  '<p>' , tagMessage($message) , '</p>';
         if ($has_image == true){
-        echo '<img class="imgPost" src="'. $image .'" >';
+        echo '<img class="imgPost" src="'. $image .'" alt="" >';
         }
 
         echo '<span class="datePost">'. $dayDate. '/'.$monthDate . '/' . $yearDate .'</span>
