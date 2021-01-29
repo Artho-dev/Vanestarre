@@ -29,7 +29,7 @@
                     </div>
                     <div>
                         <label for="login_password">Mot de passe :</label>
-                        <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="8">
+                        <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="7">
                     </div>
                     <a href="forgotten_password.php" style="color: #ecd0ff; font-size: 12px;  ">Mot de passe oublié</a>
                     <button class="inputInscription" type="submit" name="login" value="login_page">Se connecter</button>
@@ -58,12 +58,12 @@
                         elseif (isset($mail) && $mail == -1) echo '<span class="errorInputInscription">', error_mail_taken ,'</span>';?>
                     <div>
                         <label for="password">Mot de passe* :</label>
-                        <input class="inputInscription" type="password" name="password" id="password" minlength="8" placeholder="Doit contenir 8 caractères ou plus">
+                        <input class="inputInscription" type="password" name="password" id="password" minlength="7" placeholder="Doit contenir 8 caractères ou plus">
                     </div>
                     <? if (isset($password) && $password == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>'; ?>
                     <div>
                         <label for="password_confirm">Confirmer mot de passe* :</label>
-                        <input class="inputInscription" type="password" name="password_confirm" id="password_confirm" minlength="8">
+                        <input class="inputInscription" type="password" name="password_confirm" id="password_confirm" minlength="7">
                     </div>
                     <?  if (isset($password_confirm) && $password_confirm == "") {
                             echo '<span class="errorInputInscription">', error_empty_field ,'</span>';

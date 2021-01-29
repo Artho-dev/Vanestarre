@@ -19,11 +19,11 @@ define('error_password', 'Mot de passe Incorrect');
                 <form action="complete_reset_password.php" method="post">
                     <div>
                         <label for="password">Nouveau Mot de Passe :</label>
-                        <input class="inputInscription" type="password" name="password" id="password" value="" minlength="8" >
+                        <input class="inputInscription" type="password" name="password" id="password" value="" minlength="7" >
                     </div>
                     <div>
                         <label for="confirm_password">Confirmation Nouveau Mot de Passe :</label>
-                        <input class="inputInscription" type="password" name="confirm_password" id="confirm_password" value="" minlength="8" >
+                        <input class="inputInscription" type="password" name="confirm_password" id="confirm_password" value="" minlength="7" >
                     </div>
                     <button class="inputInscription" type="submit" name="reset_password" value="mail">Confirmer</button>
                 </form>
