@@ -132,9 +132,7 @@ else {
     $totalPages = getTotalPages($postPerPage);
 }
 
-if ($totalPages < $page){
-    require 'error_404_View.php';
-}
+if ($totalPages < $page) die(require_once 'error_404_View.php');
 
 if (isset ($sessionid) && $sessionid == 0) {
     require_once 'unlogged.php';

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f8e53ee-6e0c-436f-9147-0664edc01414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/error_404_View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vince\PhpstormProjects\Vanestarre" />
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\assets" />
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\php" />
       <recent name="C:\Users\vince\PhpstormProjects\Vanestarre\js" />
@@ -103,14 +102,7 @@
       <workItem from="1611680949767" duration="10195000" />
       <workItem from="1611756609965" duration="37025000" />
       <workItem from="1611919271089" duration="1287000" />
-      <workItem from="1611935581342" duration="2517000" />
-    </task>
-    <task id="LOCAL-00002" summary="Implémentation html de inscription.php">
-      <created>1610815266386</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1610815266387</updated>
+      <workItem from="1611935581342" duration="4410000" />
     </task>
     <task id="LOCAL-00003" summary="Modification du nom des assets">
       <created>1610815377277</created>
@@ -448,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611885044871</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="update error404">
+      <created>1611941500984</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1611941500985</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +466,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajout base de donnée" />
     <MESSAGE value="changement du lien de l'image background" />
     <MESSAGE value="ajout de génération lien d'inscription" />
     <MESSAGE value="correction de génération lien d'inscription" />
@@ -492,7 +490,8 @@
     <MESSAGE value="Correction Message" />
     <MESSAGE value="SELECTIONE" />
     <MESSAGE value="update final stp" />
-    <option name="LAST_COMMIT_MESSAGE" value="update final stp" />
+    <MESSAGE value="update error404" />
+    <option name="LAST_COMMIT_MESSAGE" value="update error404" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
