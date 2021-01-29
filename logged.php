@@ -32,7 +32,7 @@ page_start('Vanéstarre', ['css/home.css']);
                                                         $profil = getProfile($sessionid);
                                                         $profil_picture = $profil['picture'];
                                                         if (isset($profil_picture) && !empty($profil_picture)){
-                                                            echo 'src="'.$profil_picture.'" ';
+                                                            echo ' src="'.$profil_picture.'" ';
                                                         } else{
                                                             echo  ' src="profil_picture/profile-user.png" ';
                                                         } ?> alt=""></a>
