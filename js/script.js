@@ -64,6 +64,7 @@ function darkModeCss(){
 function reaction(_infoId){
     const ajax = new XMLHttpRequest();
     var emojiId = _infoId.id;
+    var displayAlert = false ;
     const t = emojiId.substring(0, emojiId.indexOf('_'));
     const id = emojiId.substring(emojiId.indexOf('_') + 1);
     ajax.onload = function (){
@@ -71,6 +72,14 @@ function reaction(_infoId){
     };
     ajax.open("POST", "php/reaction.php",true);
 
+    ajax.onreadystatechange = function() {
+        if (ajax.readyState == XMLHttpRequest.DONE) {
+            displayAlert =Boolean(ajax.responseText.charAt(ajax.responseText.length-1)) ;
+            if (displayAlert == true){
+                document.getElementById("alertBitCoin").style.display = "flex";
+            }
+        }
+    };
     var sendText = "t=" + t + "&id="+ id;
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     ajax.send(sendText);
@@ -80,6 +89,7 @@ function reaction(_infoId){
 function reactionDark(_infoId){
     const ajax = new XMLHttpRequest();
     var emojiId = _infoId.id;
+    var displayAlert = false ;
     const t = emojiId.substring(0, emojiId.indexOf('_'));
     const id = emojiId.substring(emojiId.indexOf('_') + 1);
     ajax.onload = function (){
@@ -87,10 +97,18 @@ function reactionDark(_infoId){
     };
     ajax.open("POST", "php/reaction.php",true);
 
+    ajax.onreadystatechange = function() {
+        if (ajax.readyState == XMLHttpRequest.DONE) {
+            displayAlert =Boolean(ajax.responseText.charAt(ajax.responseText.length-1)) ;
+            if (displayAlert == true){
+                document.getElementById("alertBitCoin").style.display = "flex";
+            }
+        }
+    };
     var sendText = "t=" + t + "&id="+ id;
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     ajax.send(sendText);
-    changeEmojiDark(_infoId,t,id);
+    changeEmoji(_infoId,t,id);
 }
 
 function changeEmoji(emoji,t,id){

@@ -20,10 +20,6 @@ page_start('Vanéstarre', ['css/home.css']);
             </form>
         </div>
         <div id="iconNav">
-            <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" onclick="displayOption(this)" alt="">
-            <div id="parameterOption" class="interactionBox">
-                <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
-            </div>
             <a href="php/deconnexion.php"><img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt=""></a>
             <span class="userHeader">
                 <?php
@@ -32,7 +28,14 @@ page_start('Vanéstarre', ['css/home.css']);
                     echo $user_username;
                 ?>
             </span>
-            <a href="profil.php"><img class="iconPicture" src="profil_picture/profile-user.png" alt=""></a>
+            <a href="profil.php"><img class="iconPicture"<?php
+                                                        $profil = getProfile($sessionid);
+                                                        $profil_picture = $profil['picture'];
+                                                        if (isset($profil_picture) && !empty($profil_picture)){
+                                                            echo 'src="'.$profil_picture.'" ';
+                                                        } else{
+                                                            echo  ' src="profil_picture/profile-user.png" ';
+                                                        } ?> alt=""></a>
         </div>
     </header>
 
@@ -67,12 +70,11 @@ page_start('Vanéstarre', ['css/home.css']);
 
         </div>
 
-        <div id="alertBitCoin">
-            <p>Bravo ! Tu es mon fan préféré ! Tu gagne l'honneur de me faire un don de 10 bitcoins</p>
+    </div>
+    <div id="alertBitCoin" style="display: none;">
+        <p>Bravo ! Tu es mon fan préféré ! Tu gagne l'honneur de me faire un don de 10 bitcoins</p>
 
-            <button onclick="hideMe(this)" id="btnBitCoin">Oui, Vanestarre je paye !</button>
-        </div>
-
+        <button onclick="hideMe(this)" id="btnBitCoin">Oui, Vanestarre je paye !</button>
     </div>
 
     <footer>

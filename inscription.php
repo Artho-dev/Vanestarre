@@ -31,7 +31,7 @@
                         <label for="login_password">Mot de passe :</label>
                         <input class="inputInscription" type="password" name="login_password" id="login_password" minlength="6">
                     </div>
-                    <a href="forgotten_password.php">Mot de passe oublié?</a>
+                    <a href="forgotten_password.php" style="color: #ecd0ff; font-size: 12px;  ">Mot de passe oublié</a>
                     <button class="inputInscription" type="submit" name="login" value="login_page">Se connecter</button>
                 </form>
             </div>

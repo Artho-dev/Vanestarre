@@ -18,26 +18,26 @@ page_start('Vanéstarre', ['css/home.css']);
         </form>
     </div>
     <div id="iconNav">
-        <img class="iconHeader" id="parameterIcon" src="assets/parameter.png" onclick="displayOption(this)" alt="">
-        <div id="parameterOption" class="interactionBox">
-            <span id="darkMode" onclick="darkModeCss()">Dark mode</span>
-        </div>
         <a href="php/deconnexion.php"><img class="iconHeader" id="logoutIcon" src="assets/logout.png" alt=""></a>
             <span class="userHeader">
                 <?php echo $user_name; ?>
             </span>
-        <img class="iconPicture" src="profil_picture/profile-user.png" alt="">
+        <img class="iconPicture" <?php if (isset($profil_picture) && !empty($profil_picture)){
+            echo 'src="'.$profil_picture.'" ';
+        } else{
+            echo  ' src="profil_picture/profile-user.png" ';
+        } ?> alt="">
     </div>
 </header>
 
 <div id="profilBox">
-    <form method="post" action="php/modif_profile.php" id="profil">
+    <form method="post" action="php/modif_profile.php" id="profil" enctype="multipart/form-data">
         <div id="profilDelimiter">
             <img class="editProfil" onclick="editProfil(this)" src="assets/editPurple.png" alt=""/>
             <img <?php if (isset($profil_picture) && !empty($profil_picture)){
                         echo 'src="'.$profil_picture.'" ';
                 } else{
-                        echo  ' src="assets/picture.PNG" ';
+                        echo  ' src="profil_picture/profile-user.png" ';
                  } ?> id="profilPictureChange" alt="">
             <div id="infoName">
                 <span id="username"><?php echo $user_name?></span>
@@ -45,7 +45,7 @@ page_start('Vanéstarre', ['css/home.css']);
             </div>
             <input onchange="changeFilePath()" type="file" name="image_file" id="fileChooser" accept="image/png, image/jpeg, image/gif">
             <label style="display: none;"  id="labelFile" for="fileChooser">Choisir une image</label>
-            <span style="display: none;" id="filePath" >Aucun fichier sélectionée</span>
+            <span style="display: none;" id="filePath" >Aucun fichier sélectioné</span>
             <p id="bio" class="infoUser"><?php if (isset($profil_bio) && !empty($profil_bio)){
                             echo $profil_bio;
                         }

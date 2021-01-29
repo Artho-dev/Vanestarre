@@ -18,6 +18,28 @@ if(isset($sessionid, $_POST['username'], $_POST['name'], $_POST['mail'], $_POST[
         $user = getUserById($userid);
         $profile = getProfile($userid);
 
+        $picture = null;
+        if($_FILES['image_file']['error'] == 0){
+            $imageFileName = $_FILES['image_file']['name'];
+            $imageTmpName = $_FILES['image_file']['tmp_name'];
+            $imageExt = explode('.',$imageFileName);
+            $imageExtension = strtolower(end($imageExt));
+            $imageNewName = "profile_picture_". $userid . "." . $imageExtension;
+            $imageDestination = 'profil_picture/'. $imageNewName;
+            $imageSize = $_FILES['image_file']['size'];
+
+            if ($imageSize > 500000 ){
+                $errorMsg = "Fichier trop volumineux (500 Ko maximum)";
+            }
+
+            $picture = $imageDestination;
+            move_uploaded_file($imageTmpName,"../" . $imageDestination);
+
+        }
+
+        updateImage($userid,$picture);
+
+
         if($username != $user['username']) {
             if(!updateUsername($userid, $username)){
                 //error
@@ -32,11 +54,11 @@ if(isset($sessionid, $_POST['username'], $_POST['name'], $_POST['mail'], $_POST[
             }
         }
 
-        if($birthday != $user['birthday']) { updateBirthday($userid, $birthday); }
+        if($birthday != $user['birth_date']) { updateBirthday($userid, $birthday); }
 
         if($bio != $profile['description']) { updateBio($userid, $bio); }
     }
-    header('location: ../profil.php');
+    header('Location: '.$_SERVER['HTTP_REFERER']);
 }
 else {
     die('Erreur Fatale');
