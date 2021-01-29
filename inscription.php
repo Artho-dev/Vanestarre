@@ -41,7 +41,7 @@
                 <form action="confirm_inscription_Controller.php" method="post" name="action">
                     <div>
                         <label for="username">Identifiant d'utilisateur* :</label>
-                        <input class="inputInscription" type="text" name="username" id="username"  pattern="^[a-z0-9]+$" placeholder="Caractères inaccentués minuscules et chiffres seulement" value="<? if (isset($username) && $username != -1) echo $username; ?>">
+                        <input class="inputInscription" type="text" name="username" id="username"  pattern="^[a-z0-9]+$" placeholder="Caractères inaccentués minuscules et chiffres seulement" value="">
                     </div>
                     <? if (isset($username) && $username == "") echo '<span class="errorInputInscription">', error_empty_field ,'</span>';
                         elseif (isset($username) && $username == -1) echo '<span class="errorInputInscription">', error_username_taken ,'</span>'; ?>
