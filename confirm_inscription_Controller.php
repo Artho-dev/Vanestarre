@@ -5,7 +5,7 @@ include 'models/Model.php';
 if (isset($_POST['action']) && $_POST['action'] == 'register') {
 
     //Vérification de la non-existance et de la justesse de chaque variable
-    if (isset($_POST['username']) && preg_match('/^[a-z0-9]+$/', $_POST['username']) && count($_POST['username']) < 20) $username = $_POST['username'];
+    if (isset($_POST['username']) && preg_match('/^[a-z0-9]+$/', $_POST['username']) && strlen($_POST['username']) < 20) $username = $_POST['username'];
 
     if (requestUserByUsername($username)->rowCount() != 0) $username = -1;
 

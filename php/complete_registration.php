@@ -14,7 +14,7 @@ if(isset($_GET['id'], $_GET['code']) && !empty($_GET['id']) && !empty($_GET['cod
         //On supprime le tuple d'inscription de la BDD
         deleteRegisterConfirmationRequest($id, $code);
 
-        require_once '../index.php';
+        header('location: ../index.php');
     }
     else {
         die('Erreur Fatale : Requête inexistante');
